@@ -1,0 +1,69 @@
+.toggle-wrapper {
+  position: relative;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  position: relative;
+  cursor: pointer;
+  background: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.4375rem;
+  width: 4.6875rem;
+  padding: 10px;
+  border-radius: 50px;
+  transition: background 0.2s linear;
+}
+
+.label .ball {
+  background: var(--darkmode-background);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 2rem;
+  width: 2rem;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + label .ball {
+  transform: translateX(37px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+body.light {
+  background: #e8e5da;
+  color: black;
+
+  .label {
+    background: var(--darkmode-background);
+  }
+
+  .ball {
+    background: #e8e5da;
+  }
+}
+
+/* // MOBILE MENU */
+@media (max-width: 48em) {
+  .toggle-wrapper {
+    align-self: flex-end;
+  }
+  .label {
+    padding: 10px;
+  }
+}
