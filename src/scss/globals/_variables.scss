@@ -1,0 +1,48 @@
+:root {
+  // COLORS
+
+  --darkmode-background: #181925;
+  --lightmode-background: #e8e5da;
+
+  //   squirrel animation
+  --squirrel: #707070;
+  --squirrelAccents: #cdcdcd;
+  --orange: #eca928;
+  --yellow: #edde4c;
+  --red: #fd689a;
+  --pinkPurple: #ca4deb;
+  --purple: #b22cff;
+  --lightBlue: #19dcea;
+
+  //   basic
+  --white: #ffffff;
+  --transparent: transparent;
+  --black: #000000;
+
+  //   FONTS
+
+  // families
+  --ff-josefin: "Josefin Sans", sans-serif;
+  --ff-titillium: "Titillium Web", sans-serif;
+
+  // font-sizes
+  --fs-body: 1rem;
+  --fs-sm: 2rem;
+  --fs-med: 1.5rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+
+  @media (min-width: 40em) {
+    --fs-sm: 2.5rem;
+    --fs-med: 2.25rem;
+    --fs-lg: 3rem;
+    --fs-xl: 5.3125rem;
+  }
+
+  @media (min-width: 61em) {
+    --fs-sm: 1.5rem;
+    --fs-med: 2.25rem;
+    --fs-lg: 3rem;
+    --fs-xl: 5.3125rem;
+  }
+}
