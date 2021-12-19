@@ -2,10 +2,10 @@
   position: relative;
 }
 
-.checkbox {
-  opacity: 0;
-  position: absolute;
-}
+// .checkbox {
+//   opacity: 0;
+//   position: absolute;
+// }
 
 .label {
   position: relative;
@@ -22,7 +22,7 @@
 }
 
 .label .ball {
-  background: var(--darkmode-background);
+  background: black;
   border-radius: 50%;
   position: absolute;
   top: 3px;
@@ -45,25 +45,15 @@
   color: #f39c12;
 }
 
-body.light {
-  background: #e8e5da;
-  color: black;
+// body.light {
+//   background: #e8e5da;
+//   color: black;
 
-  .label {
-    background: var(--darkmode-background);
-  }
+//   .label {
+//     background: var(--background-light);
+//   }
 
-  .ball {
-    background: #e8e5da;
-  }
-}
-
-/* // MOBILE MENU */
-@media (max-width: 48em) {
-  .toggle-wrapper {
-    align-self: flex-end;
-  }
-  .label {
-    padding: 10px;
-  }
-}
+//   .ball {
+//     background: #e8e5da;
+//   }
+// }

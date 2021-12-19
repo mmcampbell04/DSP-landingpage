@@ -18,11 +18,13 @@
   <body>
     <nav class="container nav-wrapper flex">
       <div class="logo">
-        <img
-          class="logo_image"
-          src="../src/images/DSP-logo-white.png"
-          alt="logo"
-        />
+        <!-- <picture>
+          <source
+            srcset="../src/images/DSP-logo-white.png"
+            media="(prefers-color-scheme: dark)"
+          />
+          <img src="../src/images/DSP-logo-black.png" alt="logo" />
+        </picture> -->
       </div>
 
       <button
@@ -47,12 +49,15 @@
         </ul>
 
         <div class="toggle-wrapper">
-          <input class="checkbox" type="checkbox" id="switch" name="theme" />
-          <label class="label" for="switch">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball"></div>
-          </label>
+          <span class="sr-only">Enable dark mode</span>
+          <div class="toggle">
+            <input type="checkbox" id="toggle" class="checkbox" />
+            <label class="label" for="toggle">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
         </div>
       </div>
     </nav>
