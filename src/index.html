@@ -16,6 +16,45 @@
     <script type="module" src="../src/app/app.js"></script>
   </head>
   <body>
-    <h1>Dead Squirrel Productions</h1>
+    <nav class="container nav-wrapper flex">
+      <div class="logo">
+        <img
+          class="logo_image"
+          src="../src/images/DSP-logo-white.png"
+          alt="logo"
+        />
+      </div>
+
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <div
+        id="primary-navigation"
+        class="text-white primary-navigation flex"
+        data-visible="false"
+      >
+        <ul class="primary-navigation-links flex">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="toggle-wrapper">
+          <input class="checkbox" type="checkbox" id="switch" name="theme" />
+          <label class="label" for="switch">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
