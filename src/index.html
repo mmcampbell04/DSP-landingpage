@@ -47,18 +47,23 @@
           <li><a href="#">Team</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-
-        <div class="toggle-wrapper">
-          <span class="sr-only">Enable dark mode</span>
-          <div class="toggle">
-            <input type="checkbox" id="toggle" class="checkbox" />
-            <label class="label" for="toggle">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-              <div class="ball"></div>
-            </label>
-          </div>
-        </div>
+        <fieldset aria-label="theme switcher" role="radiogroup">
+          <span class="toggle-container">
+            <span class="toggle">
+              <label for="light"
+                ><span class="sr-only">Light</span>
+                <i class="fas fa-moon"></i>
+              </label>
+              <input type="radio" name="theme" id="light" checked />
+              <input type="radio" name="theme" id="dark" />
+              <label for="dark"
+                ><span class="sr-only">Dark</span>
+                <i class="fas fa-sun"></i>
+              </label>
+              <span aria-hidden="true" class="toggle-switcher"></span>
+            </span>
+          </span>
+        </fieldset>
       </div>
     </nav>
   </body>

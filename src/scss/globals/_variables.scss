@@ -44,3 +44,12 @@
     --fs-xl: 5.3125rem;
   }
 }
+
+[data-theme="dark"] {
+  --text-color: #eee;
+  --bkg-color: #181925;
+
+  .logo {
+    filter: invert(100%);
+  }
+}

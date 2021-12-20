@@ -65,8 +65,9 @@ select {
   font: inherit;
 }
 
-/* Remove default button styles */
-button {
+/* Remove default button & fieldset styles */
+button,
+fieldset {
   border: none;
   background: none;
 }

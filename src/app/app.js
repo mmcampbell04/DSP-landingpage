@@ -1,42 +1,48 @@
-const toggle = document.getElementById("toggle");
-const checkSystemPreferences = window.matchMedia(
-  "(prefers-color-scheme: dark)"
-);
+console.log("boooouurns");
+
+const darkToggle = document.getElementById("dark");
+const lightToggle = document.getElementById("light");
 
 const setDarkMode = () => {
-  document.body.classList.remove("light-theme");
-  document.body.classList.add("dark-theme");
-  localStorage.setItem("colorMode", "dark");
+  document.documentElement.setAttribute("data-theme", "dark");
+  localStorage.setItem("theme", "dark");
 };
 
 const setLightMode = () => {
-  document.body.classList.remove("dark-theme");
-  document.body.classList.add("light-theme");
-  localStorage.setItem("colorMode", "light");
+  document.documentElement.setAttribute("data-theme", "light");
+  localStorage.setItem("theme", "light");
 };
 
-// checks and uses system's theme, activates checkbox;
-const setColorScheme = (e) => {
-  if (e.matches) {
-    // Dark
-    toggle.checked = true;
-    console.log("dark mode");
-  } else {
-    // Light
-    toggle.checked = false;
-    console.log("light mode");
-  }
+//  check system preferences and load & toggle correct theme
+const getUserPreference = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
 };
 
-setColorScheme(checkSystemPreferences);
-checkSystemPreferences.addEventListener("change", setColorScheme);
+// get theme from local storage
+const getThemeFromStorage = () => {
+  return localStorage.getItem("theme");
+};
 
-// toggles theme based on user changes
-toggle.addEventListener("input", (e) => {
-  const isChecked = e.target.checked;
-  if (isChecked) {
-    setDarkMode();
-  } else {
-    setLightMode();
-  }
+const radioBtns = document.querySelectorAll(".toggle input");
+radioBtns.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    darkToggle.checked ? setDarkMode() : setLightMode();
+  });
 });
+
+// check if there's an existing theme from local storage and load it, otherwise, use system preferences
+const checkAndLoadTheme = () => {
+  let currentTheme = getThemeFromStorage() || getUserPreference();
+  currentTheme == "dark" ? darkToggle.click() : lightToggle.click();
+};
+
+// event listener for change to prefers-color-scheme
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (event) => {
+    event.matches ? darkToggle.click() : lightToggle.click();
+  });
+
+checkAndLoadTheme();
