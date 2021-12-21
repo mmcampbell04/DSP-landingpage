@@ -1,7 +1,12 @@
-console.log("boooouurns");
+if (window.matchMedia("(prefers-color-scheme)").media !== "not all") {
+  console.log("🎉 Dark mode is supported");
+}
 
-const darkToggle = document.getElementById("dark");
-const lightToggle = document.getElementById("light");
+console.log("boooooo!");
+const toggle = document.getElementById("toggle");
+const checkSystemPreferences = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+);
 
 const setDarkMode = () => {
   document.documentElement.setAttribute("data-theme", "dark");
@@ -13,36 +18,44 @@ const setLightMode = () => {
   localStorage.setItem("theme", "light");
 };
 
-//  check system preferences and load & toggle correct theme
-const getUserPreference = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+// checks system preferences and activates correct checkbox;
+const setColorScheme = (e) => {
+  if (e.matches) {
+    // Dark
+    toggle.checked = true;
+    setDarkMode();
+  } else {
+    // Light
+    toggle.checked = false;
+    setLightMode();
+  }
 };
 
-// get theme from local storage
-const getThemeFromStorage = () => {
-  return localStorage.getItem("theme");
-};
-
-const radioBtns = document.querySelectorAll(".toggle input");
-radioBtns.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    darkToggle.checked ? setDarkMode() : setLightMode();
-  });
+// toggles theme based on user changes
+toggle.addEventListener("change", (e) => {
+  const isChecked = e.target.checked;
+  isChecked ? setDarkMode() : setLightMode();
 });
 
-// check if there's an existing theme from local storage and load it, otherwise, use system preferences
-const checkAndLoadTheme = () => {
-  let currentTheme = getThemeFromStorage() || getUserPreference();
-  currentTheme == "dark" ? darkToggle.click() : lightToggle.click();
+// check if there is a theme already  in local storage
+const checkAndSetTheme = () => {
+  const existingTheme = localStorage.getItem("theme");
+  if (existingTheme) {
+    // if there is an existing theme, then set it
+    document.documentElement.setAttribute("data-theme", existingTheme);
+    if (existingTheme == "dark") {
+      // if that existing theme is dark, check the box
+      toggle.checked = true;
+    } else {
+      toggle.checked = false;
+    }
+  } else {
+    // if there is no exsiting theme, then set it with system preferences
+    setColorScheme(checkSystemPreferences);
+  }
 };
 
-// event listener for change to prefers-color-scheme
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", (event) => {
-    event.matches ? darkToggle.click() : lightToggle.click();
-  });
+// listen for any changes to system preferences and reset color scheme
+checkSystemPreferences.addEventListener("change", setColorScheme);
 
-checkAndLoadTheme();
+checkAndSetTheme();
