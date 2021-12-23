@@ -59,3 +59,22 @@ const checkAndSetTheme = () => {
 checkSystemPreferences.addEventListener("change", setColorScheme);
 
 checkAndSetTheme();
+
+// MOBILE NAV TOGGLE
+const navToggle = document.querySelector(".mobile-nav-toggle");
+const nav = document.querySelector(".primary-navigation");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+const activateMobileMenu = () => {
+  hamburgerMenu.classList.toggle("animate");
+  const visibility = nav.getAttribute("data-visible");
+  if (visibility === "false") {
+    nav.setAttribute("data-visible", true);
+    navToggle.setAttribute("aria-expanded", true);
+  } else {
+    nav.setAttribute("data-visible", false);
+    navToggle.setAttribute("aria-expanded", false);
+  }
+};
+
+navToggle.addEventListener("click", activateMobileMenu);

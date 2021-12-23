@@ -17,27 +17,20 @@
   </head>
   <body>
     <nav class="container nav-wrapper flex">
-      <div class="logo">
-        <!-- <picture>
-          <source
-            srcset="../src/images/DSP-logo-white.png"
-            media="(prefers-color-scheme: dark)"
-          />
-          <img src="../src/images/DSP-logo-black.png" alt="logo" />
-        </picture> -->
-      </div>
+      <div class="logo"></div>
 
-      <button
-        class="mobile-nav-toggle"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-      >
+      <div class="mobile-nav-toggle hide-for-desktop">
+        <div
+          class="hamburger-menu"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        ></div>
         <span class="sr-only">Menu</span>
-      </button>
+      </div>
 
       <div
         id="primary-navigation"
-        class="text-white primary-navigation flex"
+        class="primary-navigation flex"
         data-visible="false"
       >
         <ul class="primary-navigation-links flex">
