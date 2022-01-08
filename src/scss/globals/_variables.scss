@@ -1,10 +1,21 @@
 :root {
+  --darkBlue: 24, 25, 37;
+  --cream: 253, 240, 213;
+
+  --bkg-dark: rgba(var(--darkBlue));
+  --bkg-light: rgba(var(--cream));
+  --bkg-alpha-dark: rgba(var(--darkBlue), 0.9);
+  --bkg-alpha-light: rgba(var(--cream), 0.9);
+
+  // LIGHT COLOR SCHEME
   --text-color: #222;
-  --bkg-color: #e8e5da;
+  --bkg-color: var(--bkg-light);
+  --bkg-alpha: var(--bkg-alpha-light);
+  --bkg-color-toggle: #181925;
 
   //   squirrel animation
-  --squirrel: #707070;
-  --squirrelAccents: #cdcdcd;
+  --squirrel: #5f5d5d;
+  --squirrelAccents: #cdcaca;
   --orange: #eca928;
   --yellow: #edde4c;
   --red: #fd689a;
@@ -13,9 +24,14 @@
   --lightBlue: #19dcea;
 
   //   basic
-  --white: #ffffff;
+  --white: rgb(255, 255, 255);
   --transparent: transparent;
   --black: #000000;
+
+  // toggle sizing
+  --bar-width: 32px;
+  --bar-height: 2.5px;
+  --bar-spacing: 8px;
 
   //   FONTS
 
@@ -25,29 +41,40 @@
 
   // font-sizes
   --fs-body: 1rem;
-  --fs-sm: 2rem;
-  --fs-med: 1.5rem;
-  --fs-lg: 1.25rem;
-  --fs-xl: 1.5rem;
+  --fs-sm: 1.75rem;
+  --fs-med: 1.55rem;
+  --fs-lg: 1.75rem;
+  --fs-xl: 2.25rem;
 
-  @media (min-width: 40em) {
-    --fs-sm: 2.5rem;
-    --fs-med: 2.25rem;
+  @media (min-width: 38em) {
+    --fs-med: 1.5rem;
     --fs-lg: 3rem;
-    --fs-xl: 5.3125rem;
+    --fs-xl: 4rem;
   }
 
-  @media (min-width: 61em) {
-    --fs-sm: 1.5rem;
+  @media (min-width: 60em) {
+    --fs-sm: 1.25rem;
     --fs-med: 2.25rem;
-    --fs-lg: 3rem;
-    --fs-xl: 5.3125rem;
+    --fs-lg: 4rem;
+    --fs-xl: 6rem;
+  }
+
+  @media (min-width: 90em) {
+    --fs-body: 1.25rem;
+    --fs-sm: 2.5rem;
+    --fs-med: 2.5rem;
+    --fs-lg: 6rem;
+    --fs-xl: 9rem;
   }
 }
 
 [data-theme="dark"] {
-  --text-color: #eee;
-  --bkg-color: #181925;
+  // --text-color: #f5f5f5;
+  --text-color: #f8f8ff;
+  --bkg-color: var(--bkg-dark);
+  --bkg-alpha: var(--bkg-alpha-dark);
+  --squirrel: #707070;
+  --squirrelAccents: #cdcdcd;
 
   .logo {
     filter: invert(100%);
