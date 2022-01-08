@@ -1,14 +1,15 @@
 @use "../globals/" as *;
 
 .nav-wrapper {
-  flex-direction: column;
-  height: 100vh;
-
-  @include breakpoint-up(large) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: background 0.4s ease-out;
+  background: none;
 }
 
 .logo {
@@ -17,44 +18,56 @@
   background-image: url(/src/images/DSP-logo-black.png);
   background-repeat: no-repeat;
   background-size: contain;
-
-  @include breakpoint-up(large) {
-    width: 10rem;
-    height: 4rem;
-  }
+  cursor: pointer;
 }
 
 .primary-navigation {
-  position: fixed;
-  inset: 0 0 0 35%;
-  // background: rgba(var(--bkg-color), 0.8);
-  background: lightblue;
-  flex-direction: column;
-  flex: 0.5 0.5 auto;
+  flex-direction: row;
+  flex: 0.72 0.72 auto;
   justify-content: space-between;
-  padding: min(20rem, 15vh) 2rem;
-  z-index: 10;
-  transform: translateX(110%);
-  transition: transform 500ms ease-in-out;
-  @include breakpoint-up(large) {
-    flex-direction: row;
-  }
+  align-items: center;
+}
+
+.primary-navigation-links {
+  justify-content: space-between;
+  flex: 0.5 0.5 auto;
+  font-size: var(--fs-sm);
 }
 
 .primary-navigation[data-visible="true"] {
   transform: translateX(0%);
 }
 
-.primary-navigation-links {
-  flex-direction: column;
-  justify-content: space-between;
-  text-transform: uppercase;
-  flex: 0.5 0.5 auto;
+// MOBILE
+@include breakpoint-down(small) {
+  .logo {
+    display: none;
+  }
 
-  @include breakpoint-up(large) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 0%;
+    background-color: var(--bkg-color);
+    padding: min(20rem, 15vh) 2rem;
+    z-index: 10;
+    transform: translateX(110%);
+    transition: transform 500ms ease-in-out;
+  }
+
+  .primary-navigation-links {
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+
+  .primary-navigation-links > li {
+    padding-block: 1rem;
+  }
+
+  .toggle-container {
+    align-self: flex-end;
   }
 }
 
-.toggle-container {
-  align-self: flex-end;
+nav.scroll {
+  background: var(--bkg-alpha);
 }
