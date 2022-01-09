@@ -1,0 +1,76 @@
+@use "../globals/" as *;
+
+.about-header {
+  text-transform: uppercase;
+  @include breakpoint-up(medium) {
+    grid-area: title;
+  }
+}
+
+.about-text {
+  @include breakpoint-up(medium) {
+    padding-right: 2.5rem;
+  }
+
+  @include breakpoint-up(large) {
+    margin-top: 1rem;
+  }
+}
+
+.about-text > p {
+  margin-top: 1rem;
+}
+
+.about-text p:first-of-type,
+.about-text p:last-of-type {
+  font-weight: bold;
+}
+
+.about-image {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint-up(medium) {
+    grid-area: photo;
+    margin-top: 0;
+    justify-content: flex-end;
+  }
+}
+
+.image-background {
+  align-self: center;
+  max-width: clamp(15rem, 20vw + 1rem, 60rem);
+  cursor: pointer;
+  padding: 1rem;
+  background: #fff;
+  transform: rotate(5deg);
+  transition: all 0.35s;
+
+  @include breakpoint-up(medium) {
+  }
+}
+
+.image-background:hover {
+  transform: rotate(0deg) scale(1.1, 1.1);
+}
+
+.caption {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.about-img {
+  filter: grayscale(100%);
+}
+
+.image-background:hover .about-img {
+  filter: none;
+}
+
+.tbc {
+  font-size: 50px;
+  text-align: center;
+}
