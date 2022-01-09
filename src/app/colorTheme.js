@@ -2,6 +2,10 @@
 //   console.log("🎉 Dark mode is supported");
 // }
 
+const checkSystemPreferences = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+);
+
 const setDarkMode = () => {
   document.documentElement.setAttribute("data-theme", "dark");
   localStorage.setItem("theme", "dark");

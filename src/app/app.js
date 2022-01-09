@@ -1,12 +1,7 @@
-import { checkAndSetTheme, setColorScheme } from "./colorTheme";
+import { checkSystemPreferences, checkAndSetTheme } from "./colorTheme";
 import { activateMobileMenu } from "./mobileMenu";
 
 // COLOR THEME LOGIC
-const checkSystemPreferences = window.matchMedia(
-  "(prefers-color-scheme: dark)"
-);
-
-checkSystemPreferences.addEventListener("change", setColorScheme);
 checkAndSetTheme();
 
 // MOBILE MENU LOGIC
