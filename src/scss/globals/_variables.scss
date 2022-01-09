@@ -2,6 +2,10 @@
   --darkBlue: 24, 25, 37;
   --cream: 253, 240, 213;
 
+  --lightBlue: #6389ff;
+  --accent-color: #292d48;
+  // --color3: #eec139;
+
   --bkg-dark: rgba(var(--darkBlue));
   --bkg-light: rgba(var(--cream));
   --bkg-alpha-dark: rgba(var(--darkBlue), 0.9);
@@ -41,18 +45,19 @@
 
   // font-sizes
   --fs-body: 1rem;
+  --fs-xs: 1.55rem;
   --fs-sm: 1.75rem;
   --fs-med: 1.55rem;
   --fs-lg: 1.75rem;
   --fs-xl: 2.25rem;
 
-  @media (min-width: 38em) {
-    --fs-med: 1.5rem;
-    --fs-lg: 3rem;
-    --fs-xl: 4rem;
+  @media (min-width: 45em) {
+    --fs-med: 2.25rem;
+    --fs-lg: 3.5rem;
+    --fs-xl: 4.5rem;
   }
 
-  @media (min-width: 60em) {
+  @media (min-width: 64em) {
     --fs-sm: 1.25rem;
     --fs-med: 2.25rem;
     --fs-lg: 4rem;
@@ -61,10 +66,11 @@
 
   @media (min-width: 90em) {
     --fs-body: 1.25rem;
+    --fs-xs: 1.75rem;
     --fs-sm: 2.5rem;
-    --fs-med: 2.5rem;
-    --fs-lg: 6rem;
-    --fs-xl: 9rem;
+    --fs-med: 3rem;
+    --fs-lg: 5rem;
+    --fs-xl: 6rem;
   }
 }
 
@@ -73,6 +79,7 @@
   --text-color: #f8f8ff;
   --bkg-color: var(--bkg-dark);
   --bkg-alpha: var(--bkg-alpha-dark);
+  --accent-color: #eec139;
   --squirrel: #707070;
   --squirrelAccents: #cdcdcd;
 
