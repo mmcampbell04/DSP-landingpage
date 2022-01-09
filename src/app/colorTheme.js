@@ -13,7 +13,7 @@ const setLightMode = () => {
 };
 
 // checks system preferences and activates correct checkbox;
-const setColorScheme = (e) => {
+export function setColorScheme(e) {
   const toggle = document.getElementById("toggle");
   if (e.matches) {
     // Dark
@@ -24,7 +24,7 @@ const setColorScheme = (e) => {
     toggle.checked = false;
     setLightMode();
   }
-};
+}
 
 // toggles theme based on user changes
 toggle.addEventListener("change", (e) => {
@@ -33,7 +33,7 @@ toggle.addEventListener("change", (e) => {
 });
 
 // check if there is a theme already  in local storage
-const checkAndSetTheme = () => {
+export function checkAndSetTheme() {
   const existingTheme = localStorage.getItem("theme");
   if (existingTheme) {
     // if there is an existing theme, then set it
@@ -48,6 +48,4 @@ const checkAndSetTheme = () => {
     // if there is no exsiting theme, then set it with system preferences
     setColorScheme(checkSystemPreferences);
   }
-};
-
-export default { checkAndSetTheme, setColorScheme };
+}
