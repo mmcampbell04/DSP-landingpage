@@ -1,4 +1,3 @@
-import navbarOnScroll from "./navbar";
 import { checkAndSetTheme, setColorScheme } from "./colorTheme";
 import { activateMobileMenu } from "./mobileMenu";
 
@@ -9,9 +8,6 @@ const checkSystemPreferences = window.matchMedia(
 
 checkSystemPreferences.addEventListener("change", setColorScheme);
 checkAndSetTheme();
-
-// fixed navbar changes color on scroll
-navbarOnScroll();
 
 // MOBILE MENU LOGIC
 const navToggle = document.querySelector(".mobile-nav-toggle");

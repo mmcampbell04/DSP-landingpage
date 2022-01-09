@@ -1,6 +1,6 @@
 @use "../globals/" as *;
 
-.nav-wrapper {
+.nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -8,13 +8,13 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  transition: background 0.4s ease-out;
-  background: none;
+  transition: background 500ms ease-in-out, color 200ms ease;
+  background: var(--bkg-alpha);
 }
 
 .logo {
-  width: 18vmin;
-  height: 7vmin;
+  width: 12vmin;
+  height: 5vmin;
   background-image: url(/src/images/DSP-logo-black.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -31,7 +31,7 @@
 .primary-navigation-links {
   justify-content: space-between;
   flex: 0.5 0.5 auto;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
 }
 
 .primary-navigation[data-visible="true"] {
@@ -66,8 +66,4 @@
   .toggle-container {
     align-self: flex-end;
   }
-}
-
-nav.scroll {
-  background: var(--bkg-alpha);
 }
