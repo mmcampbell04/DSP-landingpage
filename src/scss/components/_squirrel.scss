@@ -230,11 +230,6 @@
   border-bottom-right-radius: 12vmin;
 }
 
-.cartoon:hover .lens {
-  -webkit-animation: color-change-5x 3s ease-in-out infinite alternate both;
-  animation: color-change-5x 3s ease-in-out infinite alternate both;
-}
-
 .lens.left {
   border-top-right-radius: 5vmin;
 }
