@@ -1,15 +1,18 @@
 @use "../globals/" as *;
 
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
+nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
   transition: background 500ms ease-in-out, color 200ms ease;
-  background: var(--bkg-alpha);
+
+  @include breakpoint-down(small) {
+    position: fixed;
+    padding: 2.5rem;
+    top: 0;
+    width: 100%;
+  }
 }
 
 .logo {
@@ -66,4 +69,33 @@
   .toggle-container {
     align-self: flex-end;
   }
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bkg-alpha);
+}
+
+.top-btn {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: var(--text-color);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  // border-radius: var(--radius);
+  // color: var(--clr-white);
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+
+.show-btn {
+  visibility: visible;
+  z-index: 100;
 }

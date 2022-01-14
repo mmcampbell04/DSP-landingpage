@@ -42,43 +42,43 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <nav id="nav" class="nav flex">
-      <div class="logo"></div>
+    <header id="home">
+      <nav id="nav" class="flex">
+        <div class="logo"></div>
 
-      <div class="mobile-nav-toggle hide-for-desktop">
-        <div
-          class="hamburger-menu"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        ></div>
-        <span class="sr-only">Menu</span>
-      </div>
-
-      <div
-        id="primary-navigation"
-        class="primary-navigation flex"
-        data-visible="false"
-      >
-        <ul class="primary-navigation-links flex">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="toggle-container">
-          <span class="sr-only">Enable dark mode</span>
-          <input class="checkbox" type="checkbox" id="toggle" name="theme" />
-          <label class="label" for="toggle">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball"></div>
-          </label>
+        <div class="mobile-nav-toggle hide-for-desktop">
+          <div
+            class="hamburger-menu"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          ></div>
+          <span class="sr-only">Menu</span>
         </div>
-      </div>
-    </nav>
-    <main>
-      <header class="hero">
+
+        <div
+          id="primary-navigation"
+          class="primary-navigation flex"
+          data-visible="false"
+        >
+          <ul class="primary-navigation-links flex">
+            <li><a class="scroll-link" href="#about">About</a></li>
+            <li><a class="scroll-link" href="#services">Services</a></li>
+            <li><a class="scroll-link" href="#work">Work</a></li>
+            <li><a class="scroll-link" href="#team">Team</a></li>
+            <li><a class="scroll-link" href="#contact">Contact</a></li>
+          </ul>
+          <div class="toggle-container">
+            <span class="sr-only">Enable dark mode</span>
+            <input class="checkbox" type="checkbox" id="toggle" name="theme" />
+            <label class="label" for="toggle">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+        </div>
+      </nav>
+      <section class="hero">
         <div class="hero-layout flex">
           <div class="cartoon-wrapper">
             <div class="cartoon">
@@ -122,15 +122,18 @@
         </div>
         <div class="scroll-arrow">
           <div class="arrow-container">
+            <div class="sr-only">Scroll Down</div>
             <div class="arrow-pulse"></div>
             <div class="arrow">
               <i class="fa fa-angle-down"></i>
             </div>
           </div>
         </div>
-      </header>
-      <section class="about about-grid">
-        <h3 class="about-header fs-sm">Meet The Squirrel &#128075</h3>
+      </section>
+    </header>
+    <main>
+      <section id="about" class="about about-grid">
+        <h3 class="about-header fs-sm upper">Meet The Squirrel &#128075</h3>
         <div class="about-text">
           <p>Cheese on toast airedale the big cheese.</p>
           <p>
@@ -154,7 +157,35 @@
           </div>
         </div>
       </section>
-      <div class="tbc">TO BE CONTINUED...</div>
+      <section class="testimonials">
+        <h3 class="fs-sm upper">The Word on the street</h3>
+        <div class="slides-container"> 
+          <article class="slide active">
+            <p>"No. <span>I</span>   am your father"</p>
+            <p>Darth Vader</p>
+          </article>
+          <article class="slide">
+            <p>“Why, you stuck-up, half-witted, scruffy-looking nerf herder!”</p>
+            <p>Leia Organa</p>
+          </article>
+          <article class="slide">
+            <p>“There’s always a bigger fish.”</p>
+            <p>Qui-Gon Jinn</p>
+          </article>
+        </div>
+        <div class="slider-wrapper">
+          <input type="range" min="0" value="0" max="2" step="1" class="slider" id="range" />
+        </div>
+      </section>
+      <section id="services"></section>
+      <section id="work"></section>
+      <section id="team"></section>
+      <section id="contact"></section>
     </main>
+    <footer>
+    </footer>
+     <a class="scroll-link top-btn" href="#home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
   </body>
 </html>
