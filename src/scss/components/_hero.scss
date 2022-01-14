@@ -1,5 +1,10 @@
 @use "../globals/" as *;
 
+.hero:hover .lens {
+  -webkit-animation: color-change-5x 3s ease-in-out infinite alternate both;
+  animation: color-change-5x 3s ease-in-out infinite alternate both;
+}
+
 .hero-layout {
   flex-direction: column;
   align-items: center;
