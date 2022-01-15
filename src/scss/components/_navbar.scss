@@ -6,13 +6,6 @@ nav {
   align-items: center;
   z-index: 100;
   transition: background 500ms ease-in-out, color 200ms ease;
-
-  @include breakpoint-down(small) {
-    position: fixed;
-    padding: 2.5rem;
-    top: 0;
-    width: 100%;
-  }
 }
 
 .logo {
@@ -37,12 +30,80 @@ nav {
   font-size: var(--fs-xs);
 }
 
-.primary-navigation[data-visible="true"] {
-  transform: translateX(0%);
+.primary-navigation-links > li:hover {
+  transform: scale(1.1);
+}
+
+.top-btn {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  color: var(--text-color);
+  background: var(--accent-color);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  -webkit-animation: pulsate-bck 2s ease-in-out infinite both;
+  animation: pulsate-bck 2s ease-in-out infinite both;
+  visibility: hidden;
+  transition: all 0.25s;
+  opacity: 0;
+  z-index: -100;
+}
+
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.show-btn {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bkg-alpha);
 }
 
 // MOBILE
 @include breakpoint-down(small) {
+  nav {
+    position: fixed;
+    padding: 2.5rem;
+    top: 0;
+    width: 100%;
+  }
+
   .logo {
     display: none;
   }
@@ -51,7 +112,7 @@ nav {
     position: fixed;
     inset: 0 0 0 0%;
     background-color: var(--bkg-color);
-    padding: min(20rem, 15vh) 2rem;
+    padding: min(20rem, 15vh) 4rem;
     z-index: 10;
     transform: translateX(110%);
     transition: transform 500ms ease-in-out;
@@ -66,36 +127,20 @@ nav {
     padding-block: 1rem;
   }
 
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
   .toggle-container {
     align-self: flex-end;
   }
 }
 
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--bkg-alpha);
+// no scroll options when mobile nav is open
+.no-scroll {
+  overflow: hidden;
 }
 
-.top-btn {
-  font-size: 1.25rem;
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  background: var(--text-color);
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  // border-radius: var(--radius);
-  // color: var(--clr-white);
-  animation: bounce 2s ease-in-out infinite;
+body.no-scroll .top-btn {
   visibility: hidden;
-  z-index: -100;
-}
-
-.show-btn {
-  visibility: visible;
-  z-index: 100;
 }

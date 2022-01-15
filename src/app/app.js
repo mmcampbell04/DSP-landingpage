@@ -39,3 +39,7 @@ function getActiveSlide(slideValue) {
     newSlide.classList.add("active");
   }
 }
+
+// scroll to about section on scroll btn click
+const scrollBtn = document.querySelector(".arrow-btn");
+scrollBtn.addEventListener("click", getScrollHeight);

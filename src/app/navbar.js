@@ -3,6 +3,7 @@ const navToggle = document.querySelector(".mobile-nav-toggle");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navbar = document.getElementById("nav");
 const topBtn = document.querySelector(".top-btn");
+const body = document.querySelector("body");
 
 // fixed NAVBAR
 export function setFixedNav() {
@@ -25,6 +26,7 @@ export function setFixedNav() {
 // MOBILE NAV TOGGLE
 export function activateMobileMenu() {
   hamburgerMenu.classList.toggle("animate");
+  body.classList.toggle("no-scroll");
   const visibility = nav.getAttribute("data-visible");
   if (visibility === "false") {
     nav.setAttribute("data-visible", true);
@@ -45,12 +47,18 @@ export function getScrollHeight(e) {
   const domElement = document.getElementById(id);
 
   // get the height of the navbar
+
   const navHeight = navbar.getBoundingClientRect().height;
   let position = domElement.offsetTop - navHeight;
+  console.log(position);
+  console.log(navHeight);
 
-  // if (!fixedNav) {
-  //   position = position - navHeight;
-  // }
+  // if the navbar isn't fixed (i.e. at the top of the page) do this
+  const fixedNav = document.querySelector(".fixed-nav");
+  if (!fixedNav) {
+    position = position - navHeight;
+  }
+
   window.scrollTo({
     left: 0,
     top: position,
