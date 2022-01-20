@@ -5,11 +5,13 @@ const navbar = document.getElementById("nav");
 const body = document.querySelector("body");
 const btnUp = document.getElementById("btn-up");
 
+console.log(mobileNav);
+
 // MOBILE NAV TOGGLE
 export function activateMobileMenu() {
   hamburgerMenu.classList.toggle("animate");
   body.classList.toggle("no-scroll");
-  const visibility = nav.getAttribute("data-visible");
+  const visibility = mobileNav.getAttribute("data-visible");
   if (visibility === "false") {
     mobileNav.setAttribute("data-visible", true);
     navToggle.setAttribute("aria-expanded", true);
