@@ -1,11 +1,25 @@
-const nav = document.querySelector(".primary-navigation");
+const mobileNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navbar = document.getElementById("nav");
-const topBtn = document.querySelector(".top-btn");
 const body = document.querySelector("body");
+const btnUp = document.getElementById("btn-up");
 
-// fixed NAVBAR
+// MOBILE NAV TOGGLE
+export function activateMobileMenu() {
+  hamburgerMenu.classList.toggle("animate");
+  body.classList.toggle("no-scroll");
+  const visibility = nav.getAttribute("data-visible");
+  if (visibility === "false") {
+    mobileNav.setAttribute("data-visible", true);
+    navToggle.setAttribute("aria-expanded", true);
+  } else {
+    mobileNav.setAttribute("data-visible", false);
+    navToggle.setAttribute("aria-expanded", false);
+  }
+}
+
+// set fixed navbar on scroll
 export function setFixedNav() {
   const scrollHeight = window.pageYOffset;
   const navHeight = navbar.getBoundingClientRect().height;
@@ -17,27 +31,13 @@ export function setFixedNav() {
 
   // show the back to top button when scrolling past a certain point
   if (scrollHeight > 500) {
-    topBtn.classList.add("show-btn");
+    btnUp.classList.add("show-btn");
   } else {
-    topBtn.classList.remove("show-btn");
+    btnUp.classList.remove("show-btn");
   }
 }
 
-// MOBILE NAV TOGGLE
-export function activateMobileMenu() {
-  hamburgerMenu.classList.toggle("animate");
-  body.classList.toggle("no-scroll");
-  const visibility = nav.getAttribute("data-visible");
-  if (visibility === "false") {
-    nav.setAttribute("data-visible", true);
-    navToggle.setAttribute("aria-expanded", true);
-  } else {
-    nav.setAttribute("data-visible", false);
-    navToggle.setAttribute("aria-expanded", false);
-  }
-}
-
-// smooth scolling
+// scroll to specific section on link click
 export function getScrollHeight(e) {
   // prevent default behaviour
   e.preventDefault();
@@ -50,15 +50,15 @@ export function getScrollHeight(e) {
 
   const navHeight = navbar.getBoundingClientRect().height;
   let position = domElement.offsetTop - navHeight;
-  console.log(position);
-  console.log(navHeight);
+  console.log(`domelement offset: ${position}`);
+  console.log(`nav height: ${navHeight}`);
 
   // if the navbar isn't fixed (i.e. at the top of the page) do this
-  const fixedNav = document.querySelector(".fixed-nav");
+  const fixedNav = nav.classList.contains("fixed-nav");
   if (!fixedNav) {
     position = position - navHeight;
+    console.log(`no nav = ${position}`);
   }
-
   window.scrollTo({
     left: 0,
     top: position,

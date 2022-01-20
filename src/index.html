@@ -61,11 +61,11 @@
           data-visible="false"
         >
           <ul class="primary-navigation-links flex">
-            <li><a class="scroll-link" href="#about">About</a></li>
-            <li><a class="scroll-link" href="#services">Services</a></li>
-            <li><a class="scroll-link" href="#work">Work</a></li>
-            <li><a class="scroll-link" href="#team">Team</a></li>
-            <li><a class="scroll-link" href="#contact">Contact</a></li>
+            <li><a data-link="scroll" href="#about">About</a></li>
+            <li><a data-link="scroll" href="#services">Services</a></li>
+            <li><a data-link="scroll" href="#work">Work</a></li>
+            <li><a data-link="scroll" href="#team">Team</a></li>
+            <li><a data-link="scroll" href="#contact">Contact</a></li>
           </ul>
           <div class="toggle-container">
             <span class="sr-only">Enable dark mode</span>
@@ -120,12 +120,11 @@
           <!-- <h2>Videographer. DJ. International Mammal of Mystery.</h2> -->
           <h2 class="fs-med fw-300">Telling stories audiences go nuts for</h2>
         </div>
-        <div class="scrolldown-btn">
-              <button class="btn-round btn--arrow"><span class="sr-only">Scroll Down</span>
-              <a href="#about">
-                    <i class="fa fa-angle-down"></i>
+        <div class="btn-container">
+                <span class="sr-only">Scroll Down</span>
+              <a href="#about" data-link="scroll" class="btn btn-round btn-down" ><i class="fa fa-angle-down"></i>
+                    
                   </a>
-              </button>
           </div>
         </div>
       </section>
@@ -181,11 +180,18 @@
         <h4 class="work-subheader fs-sm upper">Tons of videos.</h4>
         <p>
            Danish fontina cheesy grin airedale danish fontina taleggio the big
-            cheese macaroni.Edam fromage lancashire feta caerphilly everyone loves chalk.
+            cheese macaroni.Edam fromage lancashire feta caerphilly everyone loves chalk.Cheese on toast airedale the big cheese.
           </p>
           <p>Edam fromage lancashire feta caerphilly!</p>
-          <button>View Our Work</button>
-          <h4 class="upper fs-xs">Fancy a Teaser?</h4>
+          <div class="btn-container">
+            <a href="#" class="btn btn-square">View Our Work</a>
+          </div>
+       <div class="teaser-container">
+         <h4 class="upper fs-xs teaser">Fancy a Teaser?</h4>
+          <div class="work-break"></div>
+       </div>
+
+          
         <div class="video-container">
           <iframe src="https://www.youtube.com/embed/50u-hM41Dxo?modestbranding=1" title="Andalucia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -197,10 +203,9 @@
     </main>
     <footer>
     </footer>
-    <button class="btn-round btn--top">
-      <a class="scroll-link" href="#home">
+      <a class="btn btn-round btn-top" data-link="scroll" id="btn-up" href="#home">
         <i class="fas fa-arrow-up"></i>
+        
       </a>
-    </button>
   </body>
 </html>
