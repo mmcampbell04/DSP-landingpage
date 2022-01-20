@@ -24,7 +24,7 @@ nav {
 
   @include breakpoint-up(medium) {
     max-width: 50em;
-    margin-top: 15rem;
+    margin-top: 5rem;
   }
 
   @include breakpoint-up(large) {
@@ -39,11 +39,11 @@ nav {
 
 .about {
   padding: 1rem;
-  margin-block: 5rem;
+  margin-block: 9rem;
   margin-inline: auto;
 
   @include breakpoint-up(medium) {
-    max-width: 41em;
+    max-width: 43em;
     margin-block: 10rem;
     padding: 0;
   }
@@ -62,11 +62,55 @@ nav {
   display: grid;
 
   @include breakpoint-up(medium) {
+    padding: 1rem;
     grid-template-columns: 1.75fr 1fr;
     // column-gap: 1rem;
     grid-template-rows: min-content 1fr;
     grid-template-areas:
       "title photo"
       "text photo";
+  }
+}
+
+.testimonials {
+  padding: 1rem;
+  margin-block: 5rem;
+  margin-inline: auto;
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+    max-width: 41em;
+    margin-block: 10rem;
+    padding: 0;
+  }
+
+  @include breakpoint-up(large) {
+    max-width: 60em;
+  }
+
+  @include breakpoint-up(xlarge) {
+    max-width: 64em;
+    margin-top: 12rem;
+  }
+}
+
+.work {
+  padding: 1rem;
+  margin-block: 9rem;
+  margin-inline: auto;
+
+  @include breakpoint-up(medium) {
+    max-width: 43em;
+    margin-block: 10rem;
+    padding: 0;
+  }
+
+  @include breakpoint-up(large) {
+    max-width: 60em;
+  }
+
+  @include breakpoint-up(xlarge) {
+    max-width: 64em;
+    margin-top: 12rem;
   }
 }
