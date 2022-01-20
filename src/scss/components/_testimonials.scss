@@ -1,0 +1,86 @@
+@use "../globals/" as *;
+
+.slides-container {
+  display: flex;
+  height: 12rem;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint-up(medium) {
+    height: 14rem;
+  }
+}
+
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  display: none;
+  padding-block: 2rem;
+  font-size: var(--fs-sm);
+
+  @include breakpoint-up(medium) {
+    padding: 2.5rem;
+  }
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide > p:first-child {
+  letter-spacing: 4px;
+}
+
+.slide > p:nth-child(2) {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.slide span {
+  font-style: italic;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 0.75rem;
+  border-radius: 5px;
+  background: var(--text-color);
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+
+  @include breakpoint-up(medium) {
+    margin-top: 2.5rem;
+  }
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: url("../images/acorn2.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: url("../images/acorn2.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.top-link {
+  background: pink;
+}
