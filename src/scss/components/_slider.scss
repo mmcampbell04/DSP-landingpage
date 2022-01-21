@@ -2,12 +2,16 @@
 
 .slides-container {
   display: flex;
-  height: 12rem;
+  height: 9rem;
   overflow: hidden;
   position: relative;
 
   @include breakpoint-up(medium) {
-    height: 14rem;
+    height: 7rem;
+  }
+
+  @include breakpoint-up(large) {
+    height: 10rem;
   }
 }
 
@@ -72,8 +76,9 @@
 }
 
 .slider::-moz-range-thumb {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border: none;
   border-radius: 50%;
   background: url("../images/acorn2.png");
   background-size: 90%;
