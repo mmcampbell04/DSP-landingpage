@@ -1,0 +1,43 @@
+@use "../globals/" as *;
+
+.work > p {
+  margin-top: 1rem;
+}
+
+.teaser {
+  text-align: center;
+  margin-block: 4rem;
+  position: relative;
+}
+
+.teaser::after {
+  position: absolute;
+  content: "";
+  border-left: 3px solid var(--text-color);
+  height: 5vmin;
+  top: 175%;
+  left: 50%;
+
+  @include breakpoint-up(medium) {
+  }
+
+  @include breakpoint-up(large) {
+    top: 220%;
+  }
+}
+
+.video-container {
+  margin-top: 4rem;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
