@@ -1,9 +1,36 @@
 @use "../globals/" as *;
 
-button {
+.btn-container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint-up(large) {
+    margin-top: 3rem;
+  }
+}
+
+.btn {
   background: var(--accent-color);
-  color: var(--text-color);
   transition: background 500ms ease-in-out, color 200ms ease;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0.2rem;
+  font-weight: bold;
+}
+
+.btn span {
+  width: 100%;
+  border: 1px solid var(--bkg-color);
+  color: var(--bkg-color);
+  display: grid;
+  place-items: center;
+}
+
+.btn span:hover {
+  background: var(--bkg-color);
+  color: var(--text-color);
 }
 
 .btn-round {
@@ -11,31 +38,59 @@ button {
   border-radius: 100%;
   -webkit-animation: pulsate-bck 2s ease-in-out infinite both;
   animation: pulsate-bck 2s ease-in-out infinite both;
-  display: grid;
-  place-items: center;
 }
 
-.btn-round::before {
-  position: absolute;
-  content: "";
-  aspect-ratio: 1 / 1;
-  width: 90%;
-  border-radius: 50%;
-  border: 3px solid var(--bkg-color);
+.btn-round span {
+  aspect-ratio: 1/1;
+  border-radius: 100%;
 }
 
-.btn--arrow {
-  width: 7vmin;
+// scroll down button
+.btn-down {
+  width: 15vmin;
+
+  @include breakpoint-up(medium) {
+    width: 12vmin;
+  }
+
+  @include breakpoint-up(large) {
+    width: 7vmin;
+  }
 }
 
-.btn--top {
+// our work button
+.btn-square {
+  max-width: 19rem;
+}
+
+.btn-square span {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 1rem 1.75rem;
+  border: 1px solid var(--bkg-color);
+  color: var(--bkg-color);
+  transition: all 0.25s ease-in-out;
+}
+
+// back to top button
+.btn-top {
   position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  width: 6vmin;
+  bottom: 2rem;
+  right: 2rem;
+  width: 7vmin;
+  visibility: hidden;
+  transition: all 0.25s;
+  opacity: 0;
+  z-index: -100;
+
+  @include breakpoint-up(large) {
+    bottom: 3rem;
+    right: 3rem;
+    width: 6vmin;
+  }
 }
 
-// show btn functionality with on scroll
+// show back to top btn functionality with on scroll
 .show-btn {
   visibility: visible;
   opacity: 1;
