@@ -13,7 +13,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
     </style>
-    <script type="module" src="../src/app/app.js"></script>
+    <script type="module" defer src="../src/app/app.js"></script>
 
     <link
       rel="apple-touch-icon"
@@ -45,25 +45,25 @@
     <header id="home">
       <nav id="nav" class="flex">
         <div class="logo"></div>
-
-        <div class="mobile-nav-toggle hide-for-desktop">
+        <div class="mobile-nav-toggle hide-for-desktop" id="mobile-nav-toggle">
           <div
+          id="hamburger-menu"
             class="hamburger-menu"
-            aria-controls="primary-navigation"
+            aria-controls="nav-links-container"
             aria-expanded="false"
           ></div>
           <span class="sr-only">Menu</span>
         </div>
 
         <div
-          id="primary-navigation"
-          class="primary-navigation flex"
+          id="nav-links-container"
+          class="nav-links-container flex"
           data-visible="false"
         >
-          <ul class="primary-navigation-links flex">
+          <ul class="nav-links flex">
             <li><a data-link="scroll" href="#about">About</a></li>
+                        <li><a data-link="scroll" href="#work">Work</a></li>
             <li><a data-link="scroll" href="#services">Services</a></li>
-            <li><a data-link="scroll" href="#work">Work</a></li>
             <li><a data-link="scroll" href="#team">Team</a></li>
             <li><a data-link="scroll" href="#contact">Contact</a></li>
           </ul>
@@ -78,6 +78,7 @@
           </div>
         </div>
       </nav>
+      </header>
       <section class="hero">
         <div class="hero-layout flex">
           <div class="cartoon-wrapper">

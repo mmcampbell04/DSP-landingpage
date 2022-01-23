@@ -13,7 +13,7 @@ const navToggle = document.querySelector(".mobile-nav-toggle");
 navToggle.addEventListener("click", activateMobileMenu);
 
 // ADDING SMOOTH SCROLLING DOWN TO DIFFERENT SECTIONS
-const scrollLinks = document.querySelectorAll(["data-link"]);
+const scrollLinks = document.querySelectorAll("[data-link]");
 scrollLinks.forEach((link) => {
   link.addEventListener("click", getScrollHeight);
 });

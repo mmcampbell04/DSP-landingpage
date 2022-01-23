@@ -1,22 +1,18 @@
-const mobileNav = document.querySelector(".primary-navigation");
-const navToggle = document.querySelector(".mobile-nav-toggle");
-const hamburgerMenu = document.querySelector(".hamburger-menu");
+const navLinks = document.getElementById("nav-links-container");
+const navToggle = document.getElementById("mobile-nav-toggle");
+const hamburgerMenu = document.getElementById("hamburger-menu");
 const navbar = document.getElementById("nav");
-const body = document.querySelector("body");
 const btnUp = document.getElementById("btn-up");
-
-console.log(mobileNav);
 
 // MOBILE NAV TOGGLE
 export function activateMobileMenu() {
   hamburgerMenu.classList.toggle("animate");
-  body.classList.toggle("no-scroll");
-  const visibility = mobileNav.getAttribute("data-visible");
+  const visibility = navLinks.getAttribute("data-visible");
   if (visibility === "false") {
-    mobileNav.setAttribute("data-visible", true);
+    navLinks.setAttribute("data-visible", true);
     navToggle.setAttribute("aria-expanded", true);
   } else {
-    mobileNav.setAttribute("data-visible", false);
+    navLinks.setAttribute("data-visible", false);
     navToggle.setAttribute("aria-expanded", false);
   }
 }
@@ -48,25 +44,23 @@ export function getScrollHeight(e) {
   console.log(id);
   const domElement = document.getElementById(id);
 
-  // get the height of the navbar
-
   const navHeight = navbar.getBoundingClientRect().height;
+  const fixedNav = navbar.classList.contains("fixed-nav");
+  //   if the navbar IS fixed, subtract the navheight as its fixed, so its taken out of the normal flow & height of the document
   let position = domElement.offsetTop - navHeight;
-  console.log(`domelement offset: ${position}`);
-  console.log(`nav height: ${navHeight}`);
 
-  // if the navbar isn't fixed (i.e. at the top of the page) do this
-  const fixedNav = nav.classList.contains("fixed-nav");
+  // if the nav is NOT fixed (i.e. user at the veryt op of the page)
   if (!fixedNav) {
     position = position - navHeight;
-    console.log(`no nav = ${position}`);
   }
+
   window.scrollTo({
     left: 0,
     top: position,
   });
 
-  nav.setAttribute("data-visible", false);
+  //   close mobile menu
+  navLinks.setAttribute("data-visible", false);
   navToggle.setAttribute("aria-expanded", false);
   hamburgerMenu.classList.remove("animate");
 }

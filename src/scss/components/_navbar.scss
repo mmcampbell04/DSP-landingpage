@@ -17,20 +17,20 @@ nav {
   cursor: pointer;
 }
 
-.primary-navigation {
+.nav-links-container {
   flex-direction: row;
   flex: 0.65 0.65 auto;
   justify-content: space-between;
   align-items: center;
 }
 
-.primary-navigation-links {
+.nav-links {
   justify-content: space-between;
   flex: 0.5 0.5 auto;
   font-size: var(--fs-xs);
 }
 
-.primary-navigation-links > li:hover {
+.nav-links > li:hover {
   transform: scale(1.1);
 }
 
@@ -54,7 +54,7 @@ nav {
     display: none;
   }
 
-  .primary-navigation {
+  .nav-links-container {
     position: fixed;
     inset: 0 0 0 0%;
     background-color: var(--bkg-color);
@@ -64,29 +64,20 @@ nav {
     transition: transform 500ms ease-in-out;
   }
 
-  .primary-navigation-links {
+  .nav-links {
     flex-direction: column;
     text-transform: uppercase;
   }
 
-  .primary-navigation-links > li {
+  .nav-links > li {
     padding-block: 1rem;
   }
 
-  .primary-navigation[data-visible="true"] {
+  .nav-links-container[data-visible="true"] {
     transform: translateX(0%);
   }
 
   .toggle-container {
     align-self: flex-end;
   }
-}
-
-// no scroll options when mobile nav is open
-.no-scroll {
-  overflow: hidden;
-}
-
-body.no-scroll .top-btn {
-  visibility: hidden;
 }
