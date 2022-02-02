@@ -51,7 +51,7 @@
 
 .slider {
   -webkit-appearance: none;
-  height: 0.75rem;
+  height: 0.5rem;
   border-radius: 5px;
   background: var(--text-color);
   outline: none;
@@ -69,23 +69,30 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: url("../images/acorn2.png");
-  background-size: 90%;
+  background: url("https://emojipedia-us.s3.amazonaws.com/source/skype/289/fire_1f525.png");
+  background-size: 80%;
+  background-position: 50% 0;
   background-repeat: no-repeat;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   width: 3rem;
   height: 3rem;
-  border: none;
   border-radius: 50%;
-  background: url("../images/acorn2.png");
-  background-size: 90%;
+  background: url("https://emojipedia-us.s3.amazonaws.com/source/skype/289/fire_1f525.png");
+  background-size: 80%;
+  background-position: 50% 0;
   background-repeat: no-repeat;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.top-link {
-  background: pink;
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.slider::-moz-range-thumb:hover {
+  transform: scale(1.1);
 }
