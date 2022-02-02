@@ -12,46 +12,38 @@
 
 .btn {
   background: var(--accent-color);
-  transition: background 500ms ease-in-out, color 200ms ease;
+  // transition: background 500ms ease-in-out, color 200ms ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   display: grid;
   place-items: center;
-  padding: 0.2rem;
-  font-weight: bold;
 }
 
 .btn span {
   width: 100%;
-  border: 1px solid var(--bkg-color);
-  color: var(--bkg-color);
+  font-size: 1.5rem;
   display: grid;
   place-items: center;
+
+  @include breakpoint-up(large) {
+    font-size: 2rem;
+  }
 }
 
-.btn span:hover {
-  background: var(--bkg-color);
-  color: var(--text-color);
+.btn:hover {
+  transform: scale(1.1);
 }
 
-.btn-round {
+.btn-scroll {
   aspect-ratio: 1 / 1;
   border-radius: 100%;
   -webkit-animation: pulsate-bck 2s ease-in-out infinite both;
   animation: pulsate-bck 2s ease-in-out infinite both;
 }
 
-.btn-round span {
-  aspect-ratio: 1/1;
-  border-radius: 100%;
-}
-
 // scroll down button
-.btn-down {
-  width: 15vmin;
-
-  @include breakpoint-up(medium) {
-    width: 12vmin;
-  }
+.btn-scroll--down {
+  width: 12vmin;
 
   @include breakpoint-up(large) {
     width: 7vmin;
@@ -61,23 +53,20 @@
 // our work button
 .btn-square {
   max-width: 19rem;
-}
-
-.btn-square span {
+  border-radius: 40px;
   font-size: 1.25rem;
+  font-weight: bold;
   text-transform: uppercase;
   padding: 1rem 1.75rem;
-  border: 1px solid var(--bkg-color);
-  color: var(--bkg-color);
-  transition: all 0.25s ease-in-out;
+  color: black;
 }
 
 // back to top button
-.btn-top {
+.btn-scroll--up {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 7vmin;
+  width: 10vmin;
   visibility: hidden;
   transition: all 0.25s;
   opacity: 0;
