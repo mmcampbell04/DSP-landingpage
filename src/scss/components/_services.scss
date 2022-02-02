@@ -1,0 +1,331 @@
+@use "../globals/" as *;
+
+// .services-container:hover .soundwaves li {
+//   display: block;
+//   animation: waves 1.2s infinite ease-in-out;
+// }
+
+.services-container {
+  display: grid;
+  width: 100%;
+
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service {
+  margin-block: 1.25rem;
+  //   @include breakpoint-up(medium) {
+  //     display: flex;
+  //   }
+}
+
+.illustration {
+  width: 30vmin;
+  height: 30vmin;
+  cursor: pointer;
+  margin-inline: auto;
+  // border: 1px solid yellow;
+  border-radius: 100%;
+  background: #f0ca5a;
+  // background: #f0ca5a;
+  //   @include breakpoint-up(medium) {
+  //     margin-inline: 0;
+  //   }
+}
+
+.service-text {
+  text-align: center;
+  margin-top: 1.5rem;
+
+  //   @include breakpoint-up(medium) {
+  //     text-align: left;
+  //   }
+}
+
+.illustration-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.illustration-container > div {
+  position: absolute;
+}
+
+/* CAMERA */
+.film {
+  background: var(--illustration);
+  border-radius: 100%;
+}
+
+.film.one {
+  top: 26%;
+  left: 28%;
+  height: 15%;
+  width: 15%;
+}
+
+.film::before {
+  position: absolute;
+  content: "";
+  top: 10%;
+  left: 38%;
+
+  background: #f0ca5a;
+  border-radius: 50%;
+}
+
+.film.one::before {
+  height: 1vmin;
+  width: 1vmin;
+  box-shadow: 1.25vmin 1.25vmin #f0ca5a, -1.25vmin 1.25vmin #f0ca5a,
+    0 2.5vmin #f0ca5a;
+}
+
+.film.two::before {
+  height: 1.25vmin;
+  width: 1.25vmin;
+  box-shadow: 1.75vmin 1.75vmin #f0ca5a, -1.75vmin 1.75vmin #f0ca5a,
+    0 3.5vmin #f0ca5a;
+}
+
+.film.two {
+  height: 20%;
+  width: 20%;
+  left: 45%;
+  top: 21%;
+}
+
+.body {
+  top: 40%;
+  left: 25%;
+  background: var(--illustration);
+  width: 45%;
+  height: 30%;
+}
+
+.body:before {
+  content: "";
+  position: absolute;
+  background: var(--illustration);
+  clip-path: polygon(0 50%, 100% 100%, 100% 0);
+  height: 80%;
+  width: 50%;
+  left: 75%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// film hover effects
+.camera:hover .film {
+  -webkit-animation: rotate-center 1.9s linear infinite both;
+  animation: rotate-center 1.9s linear infinite both;
+}
+
+/* SCISSORS */
+
+.half {
+  width: 90%;
+  height: 30%;
+  top: 35%;
+  left: 10%;
+  transform-origin: 45% 45%;
+}
+
+.half div {
+  position: absolute;
+}
+
+.top {
+  transform: rotate(15deg) scaleY(1);
+}
+
+.bottom {
+  transform: rotate(-15deg) scaleY(-1);
+}
+
+.handle {
+  width: 32%;
+  height: 55%;
+  border: 1.9vmin solid var(--illustration);
+  border-radius: 2rem;
+}
+
+.blade {
+  width: 66%;
+  height: 1.9vmin;
+  top: 32%;
+  left: 25%;
+  background: silver;
+  border-radius: 0 0 1em 0;
+  z-index: -100;
+}
+
+.blade::before {
+  position: absolute;
+  content: "";
+  left: 5%;
+  bottom: 30%;
+  height: 6vmin;
+  width: 7vmin;
+  background: silver;
+  clip-path: polygon(0 40%, 0% 100%, 100% 100%);
+}
+
+.hinge {
+  height: 1.75vmin;
+  width: 1.75vmin;
+  background: var(--illustration);
+  border-radius: 100%;
+  top: 46%;
+  left: 48%;
+}
+
+// scissor HOVER EFFECTS
+.scissors:hover .top {
+  animation: cut-top 2s infinite linear;
+  -webkit-animation: cut-top 2s infinite linear;
+}
+
+.scissors:hover .bottom {
+  animation: cut-bottom 2s infinite linear;
+  -webkit-animation: cut-bottom 2s infinite linear;
+}
+
+// HEADPHONES
+.headphone-band {
+  height: 50%;
+  width: 50%;
+  border-radius: 100%;
+  border: 2vmin solid var(--illustration);
+  clip-path: inset(0 0 50% 0);
+  top: 20%;
+  left: 25%;
+}
+
+.headphone {
+  height: 30%;
+  width: 15%;
+  top: 55%;
+  border-radius: 25%;
+}
+
+.headphone::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.headphone.left {
+  transform: translateY(-50%);
+  background: linear-gradient(to right, silver 40%, var(--illustration) 20%);
+  left: 20%;
+}
+
+.headphone.left::after {
+  background-image: linear-gradient(
+    to right,
+    var(--illustration) 80%,
+    silver 20%
+  );
+  clip-path: circle(50% at 100% 50%);
+  left: -80%;
+}
+
+.headphone.right {
+  transform: translateY(-50%);
+  background: linear-gradient(to left, silver 40%, var(--illustration) 20%);
+  right: 20%;
+}
+
+.headphone.right::after {
+  background-image: linear-gradient(
+    to left,
+    var(--illustration) 80%,
+    silver 20%
+  );
+  clip-path: circle(50% at 0 50%);
+  right: -80%;
+}
+
+.soundwaves {
+  list-style: none;
+  position: absolute;
+  height: 5vmin;
+  width: 25%;
+  top: 47%;
+  left: 37.5%;
+
+  @include breakpoint-up(medium) {
+    top: 50%;
+  }
+}
+
+.soundwaves li {
+  display: none;
+  position: absolute;
+  height: 3vmin;
+  width: 1vmin;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.25em;
+  background: var(--white);
+  //   animation-duration: 1.2s;
+  //   animation-timing-function: ease-in-out;
+  //   animation-iteration-count: infinite;
+}
+
+// headphones on hover
+.headphones:hover li {
+  display: block;
+  animation: soundwaves 1.5s infinite ease-in-out;
+}
+
+.soundwaves li:nth-of-type(1) {
+  left: 0;
+  animation-delay: 0.25s;
+}
+.soundwaves li:nth-of-type(2) {
+  left: 20%;
+  animation-delay: 0.5s;
+}
+.soundwaves li:nth-of-type(3) {
+  left: 40%;
+  animation-delay: 0.75s;
+}
+.soundwaves li:nth-of-type(4) {
+  left: 60%;
+  animation-delay: 1s;
+}
+.soundwaves li:nth-of-type(5) {
+  left: 80%;
+  animation-delay: 1.25s;
+}
+
+// version 2soundwaves - no hover - too annoying!
+
+// .soundwaves li:nth-of-type(1) {
+//   left: 0;
+//   animation-name: small;
+// }
+// .soundwaves li:nth-of-type(2) {
+//   left: 20%;
+//   animation-name: medium;
+// }
+// .soundwaves li:nth-of-type(3) {
+//   left: 40%;
+//   animation-name: small;
+// }
+// .soundwaves li:nth-of-type(4) {
+//   left: 60%;
+//   animation-name: large;
+// }
+// .soundwaves li:nth-of-type(5) {
+//   left: 80%;
+//   animation-name: small;
+// }
