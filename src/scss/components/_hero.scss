@@ -38,13 +38,3 @@
     margin-top: -2rem;
   }
 }
-
-.scrolldown-btn {
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-
-  @include breakpoint-up(large) {
-    margin-top: 3rem;
-  }
-}
