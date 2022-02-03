@@ -11,9 +11,6 @@
 }
 
 .btn {
-  background: var(--accent-color);
-  // transition: background 500ms ease-in-out, color 200ms ease;
-  transition: all 0.3s ease;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -26,7 +23,7 @@
   place-items: center;
 
   @include breakpoint-up(large) {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -36,9 +33,14 @@
 
 .btn-scroll {
   aspect-ratio: 1 / 1;
-  border-radius: 100%;
+  border-radius: 50%;
   -webkit-animation: pulsate-bck 2s ease-in-out infinite both;
   animation: pulsate-bck 2s ease-in-out infinite both;
+  transition: background 500ms ease-in-out;
+}
+
+.btn-scroll:hover {
+  background: var(--accent-color);
 }
 
 // scroll down button
@@ -46,19 +48,22 @@
   width: 12vmin;
 
   @include breakpoint-up(large) {
-    width: 7vmin;
+    width: 8vmin;
   }
 }
 
 // our work button
 .btn-square {
-  max-width: 19rem;
+  background: var(--accent-color);
+  max-width: 13rem;
   border-radius: 40px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   padding: 1rem 1.75rem;
-  color: black;
+  color: var(--bkg-color);
+  margin-inline: auto;
+  margin-top: 2rem;
 }
 
 // back to top button
@@ -75,7 +80,7 @@
   @include breakpoint-up(large) {
     bottom: 3rem;
     right: 3rem;
-    width: 6vmin;
+    width: 8vmin;
   }
 }
 
@@ -84,4 +89,8 @@
   visibility: visible;
   opacity: 1;
   z-index: 100;
+}
+
+#newsletter-form button {
+  margin-inline: 0;
 }

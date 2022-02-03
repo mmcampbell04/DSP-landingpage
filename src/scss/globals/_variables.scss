@@ -1,10 +1,6 @@
 :root {
+  --cream: 250, 243, 221;
   --darkBlue: 24, 25, 37;
-  --cream: 253, 240, 213;
-
-  --lightBlue: #6389ff;
-  --accent-color: #292d48;
-  // --color3: #eec139;
 
   --bkg-dark: rgba(var(--darkBlue));
   --bkg-light: rgba(var(--cream));
@@ -16,16 +12,22 @@
   --bkg-color: var(--bkg-light);
   --bkg-alpha: var(--bkg-alpha-light);
   --bkg-color-toggle: #181925;
+  --accent-bkg: #efe7be;
+  --accent-color: #ec058e;
+  --illustration-primary: #222;
+  --illustration-secondary: #ec058e;
 
   //   squirrel animation
-  --squirrel: #5f5d5d;
-  --squirrelAccents: #cdcaca;
+  // --squirrel: #5f5d5d;
+  // --squirrelAccents: #cdcaca;
   --orange: #eca928;
   --yellow: #edde4c;
   --red: #fd689a;
   --pinkPurple: #ca4deb;
   --purple: #b22cff;
   --lightBlue: #19dcea;
+  --squirrel: #707070;
+  --squirrelAccents: #cdcdcd;
 
   //   basic
   --white: rgb(255, 255, 255);
@@ -45,6 +47,7 @@
 
   // font-sizes
   --fs-body: 1rem;
+  --fs-xxs: 0.75rem;
   --fs-xs: 1.55rem;
   --fs-sm: 1.55rem;
   --fs-med: 1.75rem;
@@ -59,6 +62,7 @@
   }
 
   @media (min-width: 64em) {
+    --fs-xxs: 1.1rem;
     --fs-sm: 1.25rem;
     --fs-med: 2.25rem;
     --fs-lg: 4rem;
@@ -76,11 +80,14 @@
 }
 
 [data-theme="dark"] {
-  // --text-color: #f5f5f5;
   --text-color: #f8f8ff;
   --bkg-color: var(--bkg-dark);
   --bkg-alpha: var(--bkg-alpha-dark);
-  --accent-color: #eec139;
+  --accent-bkg: #2c2e44;
+  --accent-color: #c2e812;
+  --illustration-primary: #c2e812;
+  --illustration-secondary: #f8f8ff;
+
   --squirrel: #707070;
   --squirrelAccents: #cdcdcd;
 
