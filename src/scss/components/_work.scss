@@ -6,28 +6,21 @@
 
 .teaser {
   text-align: center;
-  margin-block: 4rem;
+  margin-block: 3rem 2rem;
   position: relative;
 }
 
-.teaser::after {
-  position: absolute;
-  content: "";
-  border-left: 3px solid var(--text-color);
-  height: 5vmin;
-  top: 175%;
-  left: 50%;
+.emoji-container {
+  display: flex;
+  justify-content: center;
+}
 
-  @include breakpoint-up(medium) {
-  }
-
-  @include breakpoint-up(large) {
-    top: 220%;
-  }
+.emoji {
+  font-size: 2rem;
 }
 
 .video-container {
-  margin-top: 4rem;
+  margin-top: 3rem;
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
