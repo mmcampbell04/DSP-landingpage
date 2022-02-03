@@ -1,0 +1,53 @@
+@use "../globals/" as *;
+
+form {
+  width: 100%;
+
+  @include breakpoint-up(medium) {
+    width: 60%;
+  }
+}
+
+// .form-details {
+//   display: flex;
+//   gap: 5%;
+// }
+
+.form-controls {
+  height: 3rem;
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  border: 2px solid var(--text-color);
+  margin-block: 1.5rem 0.5rem;
+  background: var(--accent-bkg);
+  font-family: inherit;
+  font-size: var(--fs-body);
+}
+
+form label {
+  width: 100%;
+}
+
+textarea.form-inputs {
+  height: auto;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border: 3px solid var(--accent-color);
+}
+
+::placeholder {
+  color: var(--text-color);
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--text-color);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--text-color);
+}
