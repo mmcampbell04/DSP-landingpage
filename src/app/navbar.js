@@ -11,9 +11,11 @@ export function activateMobileMenu() {
   if (visibility === "false") {
     navLinks.setAttribute("data-visible", true);
     navToggle.setAttribute("aria-expanded", true);
+    btnUp.classList.remove("show-btn");
   } else {
     navLinks.setAttribute("data-visible", false);
     navToggle.setAttribute("aria-expanded", false);
+    btnUp.classList.add("show-btn");
   }
 }
 
