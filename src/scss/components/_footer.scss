@@ -1,0 +1,43 @@
+@use "../globals/" as *;
+
+.locations {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.location.ldn {
+  margin-block: 1rem 2rem;
+  @include breakpoint-up(medium) {
+    margin: 0 0 0 2rem;
+  }
+}
+
+address > a {
+  font-style: normal;
+  font-family: var(--ff-josefin);
+  font-size: var(--fs-xxs);
+}
+
+.sm-icons {
+  margin: 0 2rem 0 0;
+  @include breakpoint-up(medium) {
+  }
+}
+
+.sm-icons > i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sm-icons > i:not(:last-child) {
+  margin-right: 1rem;
+}
+
+footer > div:last-child {
+  justify-content: space-evenly;
+}
