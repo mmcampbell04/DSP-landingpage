@@ -71,3 +71,13 @@ p {
 .upper {
   text-transform: uppercase;
 }
+
+address a {
+  font-style: normal;
+  font-size: var(--fs-xxs);
+  font-family: var(--ff-josefin);
+}
+
+address {
+  line-height: 1.2;
+}

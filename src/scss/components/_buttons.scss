@@ -18,11 +18,11 @@
 
 .btn span {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: grid;
   place-items: center;
 
-  @include breakpoint-up(large) {
+  @include breakpoint-up(medium) {
     font-size: 3rem;
   }
 }
@@ -69,7 +69,7 @@
 // back to top button
 .btn-scroll--up {
   position: fixed;
-  bottom: 2rem;
+  bottom: 4rem;
   right: 2rem;
   width: 10vmin;
   visibility: hidden;
@@ -78,7 +78,7 @@
   z-index: -100;
 
   @include breakpoint-up(large) {
-    bottom: 3rem;
+    bottom: 5rem;
     right: 3rem;
     width: 8vmin;
   }
@@ -89,8 +89,4 @@
   visibility: visible;
   opacity: 1;
   z-index: 100;
-}
-
-#newsletter-form button {
-  margin-inline: 0;
 }

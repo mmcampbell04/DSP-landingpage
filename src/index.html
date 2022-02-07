@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../src/scss/styles.scss" />
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7_dtp.css" rel="stylesheet" type="text/css">
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
     </style>
@@ -44,7 +45,7 @@
   <body id="home">
     <header>
       <nav id="nav" class="flex">
-        <div class="logo"></div>
+        <div class="logo nav-logo"></div>
         <div class="mobile-nav-toggle hide-for-desktop" id="mobile-nav-toggle">
           <div
           id="hamburger-menu"
@@ -259,46 +260,57 @@
       <section id="subscribe">
         <h4 class="fs-sm upper">Become a Squirrelfriend</h4>
         <p>Signup to our newsletter and keep up-to-date with all the Squirrel's (mis)adventures!</p>
-        <form action="/" id="newsletter-form">
+        <div class="mailchimp-container">
+          <!-- Begin Mailchimp Signup Form -->
+          <div id="mc_signup">
+            <form action="https://gmail.us14.list-manage.com/subscribe/post?u=30b4e8e4bdb6d6db6845bd0b3&amp;id=2f4ec8c052" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <input type="email" value="" name="EMAIL" class="form-controls" id="mce-EMAIL" placeholder="Email..." required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_30b4e8e4bdb6d6db6845bd0b3_2f4ec8c052" tabindex="-1" value=""></div>
+                      <div class="mc-container">
+                          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-square">
+                          <p class="brandingLogo"><a href="http://eepurl.com/hTTRuH" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                      </div>
+                </div>
+            </form>
+          </div>
+          <!--End mc_embed_signup-->
+        </div>
+        <!-- <form action="/" id="newsletter-form">
           <label><input type="email" name="newsletter" id="newsletter" class="form-controls" placeholder="Email..."/></label>
         <p class="fs-xxs">By subscribing, you agree with Mailchimp's <a href="">Terms</a> & <a hrf="/">Privacy Policy</a></p>
         <button class="btn btn-square">Subscribe</button>
-        </form>
+        </form> -->
       </section>
     </main>
-    <footer class="flex">
-      <div class="locations flex">
-          <div class="location mtl">
-            <h4 class="fs-body upper">Montreal Office</h4>
-            <address>
-              <a href="https://goo.gl/maps/yRwFHK9hcfpBCmRh6"
-                >93 Saint-Catherine St W
-                H2X 1Z7</a
-              >
-            </address>
-          </div>
-          <div class="location ldn">
-            <h4 class="fs-body upper">London Office</h4>
-            <address>
-              <a href="https://goo.gl/maps/KNjxb2DzMBBtjUgG9"
-                >Unit CG08 Kings Cross Station
-                N1C 9AP</a
-              >
-            </address>
-          </div>
-        </div>
-      <div class="flex">
-        <div class="sm-icons flex">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-youtube"></i>
-      </div>
-      <p class="fs-xxs">DSP © 2022</p>
-      </div>
-      
-    </footer>
-      <a class="btn btn-scroll btn-scroll--up" data-link="scroll" id="btn-up" href="#home">
+    <footer class="footer flex">
+            <div class="footer-main flex">
+                <div class="logo footer-logo"></div>
+                <h4 class="footer-text-header upper">Montreal Office</h4>
+                <address>
+                    <a href="https://goo.gl/maps/yRwFHK9hcfpBCmRh6"
+                  >93 Saint-Catherine St W
+                  H2X 1Z7</a>
+                </address>
+                <h4 class="footer-text-header upper">London Office</h4>
+                <address>
+                  <a href="https://goo.gl/maps/KNjxb2DzMBBtjUgG9"
+                    >Unit CG08 Kings Cross Station
+                    N1C 9AP</a
+                  >
+                </address>
+                    <p class="footer-fineprint fs-xxs">© Dead Squirrel Productions 2022</p>
+            </div>
+            <ul class="social-list">
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></li>
+                  <li class="social-item"><a href="#" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
+            </ul>
+        </footer>
+    <a class="btn btn-scroll btn-scroll--up" data-link="scroll" id="btn-up" href="#home">
         <span>&#9757</span>
       </a>
   </body>

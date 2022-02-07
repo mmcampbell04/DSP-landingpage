@@ -12,6 +12,13 @@
   margin-inline: auto;
 }
 
+.logo {
+  background-image: url(/src/images/DSP-logo-black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
 nav {
   margin-inline: auto;
   padding: 1.5rem 3rem;
@@ -46,8 +53,7 @@ nav {
   }
 }
 
-section,
-footer {
+section {
   padding: 1rem;
   margin-top: 9rem;
   margin-inline: auto;
@@ -84,12 +90,21 @@ footer {
 
 footer {
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  gap: 1.5em;
+  margin-block: 9rem 3rem;
 
   @include breakpoint-up(medium) {
-    flex-direction: row;
-    justify-content: space-between;
+    max-width: 43em;
+    margin-top: 10rem;
+  }
+
+  @include breakpoint-up(large) {
+    max-width: 60em;
+  }
+
+  @include breakpoint-up(xlarge) {
+    max-width: 82em;
+    margin-top: 12rem;
   }
 }

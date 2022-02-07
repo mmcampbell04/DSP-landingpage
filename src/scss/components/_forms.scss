@@ -8,11 +8,6 @@ form {
   }
 }
 
-// .form-details {
-//   display: flex;
-//   gap: 5%;
-// }
-
 .form-controls {
   height: 3rem;
   width: 100%;
@@ -23,6 +18,7 @@ form {
   background: var(--accent-bkg);
   font-family: inherit;
   font-size: var(--fs-body);
+  color: var(--text-color);
 }
 
 form label {
@@ -50,4 +46,21 @@ textarea:focus {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: var(--text-color);
+}
+
+// newsletter form from mailchimp
+.mc-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+}
+
+.brandingLogo {
+  width: 40%;
+}
+
+.mc-container input[type="submit"] {
+  margin-top: 0;
+  margin-inline: 0;
+  border: none;
 }
