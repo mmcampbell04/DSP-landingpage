@@ -2,8 +2,6 @@ Landing page for "Dead Squirrel Productions", the side-gig retirement project of
 
 I was given carte-blanche for the content and design, and the DSP "brand" is whimsical and irreverent, which I aimed to build into the site. Design inspiration courtesy of Jhey Thompkins' website & Egghead CSS art course.
 
-Copy written by me.
-
 What I've learned so far:
 
 - how to create my own dark mode toggle and use local storage
@@ -13,3 +11,10 @@ What I've learned so far:
 - a better understanding of ES6 import/export modules
 - how to set a fixed/sticky navbars
 - how incredibly (and frustratingly!) straightforward it is to use a range slider with a slidehow
+
+Live site (currently in progress) here: https://mmcampbell04.github.io/DSP-landingpage/
+
+Still to-do:
+
+- contact modal
+- write actual copy & remove lorem ipsum
