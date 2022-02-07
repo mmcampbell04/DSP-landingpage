@@ -1,35 +1,26 @@
 @use "../globals/" as *;
 
+// activate animations when hover anywhere in the hero section
+.hero:hover .lens {
+  -webkit-animation: color-change-5x 3s ease-in-out infinite alternate both;
+  animation: color-change-5x 3s ease-in-out infinite alternate both;
+}
+
 .cartoon-wrapper {
   width: 60vmin;
   height: 60vmin;
   position: relative;
 
-  // @include breakpoint-up(medium) {
-  //   width: 55vmin;
-  //   height: 55vmin;
-  // }
-
   @include breakpoint-up(large) {
-    width: 80vmin;
-    height: 40vmin;
+    width: 30vmin;
+    height: 30vmin;
+    left: 10%;
   }
 }
 
 .cartoon div {
   position: absolute;
   box-sizing: border-box;
-}
-
-.face::after {
-  width: 100%;
-  height: 50%;
-  top: 50%;
-  left: -1%;
-  border-radius: 50%;
-  z-index: -10000;
-  -webkit-box-shadow: 12px 15px 15px 0px rgba(0, 0, 0, 0.32);
-  box-shadow: 12px 15px 15px 0px rgba(0, 0, 0, 0.32);
 }
 
 .b::before,
@@ -105,9 +96,9 @@
 .face::before {
   background: var(--squirrelAccents);
   width: 50%;
-  height: 53%;
+  height: 55%;
   border-radius: 50%;
-  bottom: -6%;
+  bottom: -8%;
   left: 25%;
   border: 1px solid var(--squirrelAccents);
 }
@@ -144,8 +135,8 @@
 .nose {
   top: 48%;
   left: 39%;
-  width: 22%;
-  height: 24%;
+  width: 23%;
+  height: 26%;
   background: black;
   -webkit-clip-path: polygon(50% 68%, 0 19%, 100% 19%);
   clip-path: polygon(50% 68%, 0 19%, 100% 19%);
@@ -298,17 +289,5 @@
   .freckles {
     left: 46%;
     box-shadow: black 3.25vmin 0vmin, black 1.25vmin -2.75vmin;
-  }
-}
-
-@media (max-width: 52em) {
-  .bridge {
-    width: 9%;
-    left: 27%;
-  }
-
-  .freckles {
-    left: 45%;
-    box-shadow: black 3.25vmin 0vmin, black 1.5vmin -2.75vmin;
   }
 }
