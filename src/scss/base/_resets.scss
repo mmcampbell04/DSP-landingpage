@@ -102,3 +102,16 @@ fieldset {
   white-space: nowrap;
   border: 0;
 }
+
+// scrollbar resets
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: var(--accent-color);
+}
+body::-webkit-scrollbar-track {
+  /* Background */
+  background: var(--bkg-color);
+}
