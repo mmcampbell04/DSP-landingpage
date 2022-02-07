@@ -49,26 +49,38 @@
   font-style: italic;
 }
 
-.slider {
-  -webkit-appearance: none;
-  height: 0.5rem;
-  border-radius: 5px;
-  background: var(--text-color);
-  outline: none;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
-
-  @include breakpoint-up(medium) {
-    margin-top: 2.5rem;
-  }
-}
-
-.slider::-webkit-slider-thumb {
+input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--text-color);
+  height: 0.5rem;
+  border-radius: 5px;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: var(--text-color);
+  height: 0.5rem;
+  border-radius: 5px;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -20px; /* Centers thumb on the track */
+  background-color: var(--bkg-color);
   width: 3rem;
   height: 3rem;
-  border-radius: 50%;
   background: url("https://emojipedia-us.s3.amazonaws.com/source/skype/289/fire_1f525.png");
   background-size: 80%;
   background-position: 50% 0;
@@ -77,22 +89,34 @@
   cursor: pointer;
 }
 
-.slider::-moz-range-thumb {
+/***** Thumb Styles *****/
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+  background-color: var(--bkg-color);
   width: 3rem;
   height: 3rem;
-  border-radius: 50%;
   background: url("https://emojipedia-us.s3.amazonaws.com/source/skype/289/fire_1f525.png");
-  background-size: 80%;
+  background-size: 100%;
   background-position: 50% 0;
   background-repeat: no-repeat;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.slider::-webkit-slider-thumb:hover {
-  transform: scale(1.1);
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
 }
 
-.slider::-moz-range-thumb:hover {
-  transform: scale(1.1);
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb {
+  transform: scale(1.5);
+}
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-thumb {
+  transform: scale(1.5);
 }
