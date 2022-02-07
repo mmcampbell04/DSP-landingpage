@@ -1,15 +1,5 @@
 @use "../globals/" as *;
 
-.btn-container {
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-
-  @include breakpoint-up(large) {
-    margin-top: 3rem;
-  }
-}
-
 .btn {
   cursor: pointer;
   display: grid;
@@ -23,7 +13,7 @@
   place-items: center;
 
   @include breakpoint-up(medium) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
