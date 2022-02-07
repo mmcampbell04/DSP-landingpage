@@ -72,6 +72,12 @@ p {
   text-transform: uppercase;
 }
 
+// SPECIFICS
+
+.emoji {
+  font-size: 2rem;
+}
+
 address a {
   font-style: normal;
   font-size: var(--fs-xxs);

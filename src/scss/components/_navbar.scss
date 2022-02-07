@@ -8,13 +8,9 @@ nav {
   transition: background 500ms ease-in-out, color 200ms ease;
 }
 
-.logo {
-  width: 12vmin;
-  height: 5vmin;
-  background-image: url(/src/images/DSP-logo-black.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
+.nav-logo {
+  width: 7em;
+  height: 3em;
 }
 
 .nav-links-container {
@@ -50,7 +46,7 @@ nav {
     width: 100%;
   }
 
-  .logo {
+  .nav-logo {
     display: none;
   }
 

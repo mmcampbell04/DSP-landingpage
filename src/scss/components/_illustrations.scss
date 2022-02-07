@@ -1,32 +1,10 @@
 @use "../globals/" as *;
 
-.services-container {
-  display: grid;
-  width: 100%;
-
-  @include breakpoint-up(large) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.service {
-  margin: 1.25rem;
-}
-
 .illustration {
   width: 30vmin;
   height: 30vmin;
   cursor: pointer;
   margin-inline: auto;
-}
-
-.service-text {
-  text-align: center;
-  padding-inline: 2.75rem;
-
-  //   @include breakpoint-up(medium) {
-  //     text-align: left;
-  //   }
 }
 
 .illustration-container {
