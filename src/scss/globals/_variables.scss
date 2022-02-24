@@ -9,6 +9,7 @@
 
   // LIGHT COLOR SCHEME
   --text-color: #222;
+  --text-accent: #f8f8ff;
   --bkg-color: var(--bkg-light);
   --bkg-alpha: var(--bkg-alpha-light);
   --bkg-color-toggle: #181925;
@@ -47,40 +48,16 @@
 
   // font-sizes
   --fs-body: 1rem;
-  --fs-xxs: 0.75rem;
-  --fs-xs: 1.55rem;
-  --fs-sm: 1.55rem;
-  --fs-med: 1.75rem;
-  --fs-lg: 1.75rem;
-  --fs-xl: 2.25rem;
-
-  @media (min-width: 45em) {
-    --fs-sm: 2.1rem;
-    --fs-med: 2.25rem;
-    --fs-lg: 3.5rem;
-    --fs-xl: 4.5rem;
-  }
-
-  @media (min-width: 64em) {
-    --fs-xxs: 1.1rem;
-    --fs-sm: 1.25rem;
-    --fs-med: 2.25rem;
-    --fs-lg: 4rem;
-    --fs-xl: 6rem;
-  }
-
-  @media (min-width: 90em) {
-    --fs-body: 1.25rem;
-    --fs-xs: 1.75rem;
-    --fs-sm: 2.5rem;
-    --fs-med: 3rem;
-    --fs-lg: 5rem;
-    --fs-xl: 6rem;
-  }
+  --fs-xxs: clamp(0.5rem, 5vw, 0.75rem);
+  --fs-xs: clamp(0.75rem, 5vw, 0.9rem);
+  --fs-sm: clamp(1.25rem, 3vw, 1.75rem);
+  --fs-med: clamp(1.5rem, 5vw, 3rem); //subheader
+  --fs-lg: clamp(1.5rem, 7.75vw, 6.25rem); //header
 }
 
 [data-theme="dark"] {
   --text-color: #f8f8ff;
+  --text-accent: #222;
   --bkg-color: var(--bkg-dark);
   --bkg-alpha: var(--bkg-alpha-dark);
   --accent-bkg: #2c2e44;
