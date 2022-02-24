@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dead Squirrel Productions</title>
+    <title>Dead Squirel Productions</title>
     <script
       src="https://kit.fontawesome.com/3376c03b9c.js"
       crossorigin="anonymous"
@@ -44,8 +44,7 @@
   </head>
   <body id="home">
     <header>
-      <nav id="nav" class="flex">
-        <div class="logo nav-logo"></div>
+      <nav id="nav" class="flex">   
         <div class="mobile-nav-toggle hide-for-desktop" id="mobile-nav-toggle">
           <div
           id="hamburger-menu"
@@ -61,6 +60,7 @@
           class="nav-links-container flex"
           data-visible="false"
         >
+        <div class="logo nav-logo"></div>
           <ul class="nav-links flex">
             <li><a data-link="scroll" href="#about">About</a></li>
             <li><a data-link="scroll" href="#work">Work</a></li>
@@ -68,6 +68,7 @@
             <li><a data-link="scroll" href="#contact">Contact</a></li>
           </ul>
           <div class="toggle-container">
+            <audio id="audio" src="./images/mixkit-cool-interface-click-tone-2568.wav" autoplay="false"></audio>
             <span class="sr-only">Enable dark mode</span>
             <input class="checkbox" type="checkbox" id="toggle" name="theme" />
             <label class="label" for="toggle">
@@ -82,7 +83,6 @@
       
     <main>
       <section class="hero">
-        <!-- <div class="hero-layout"> -->
           <div class="cartoon-wrapper">
             <div class="cartoon">
               <div class="ears left a"></div>
@@ -113,8 +113,8 @@
           </div>
           <div class="hero-title">
             <h1>
-              <span class="fs-xl">Dead Squirrel</span>
-              <span class="fs-lg fw-300 ltr-space4">Productions</span>
+              <span class="fs-lg ltr-space2">Dead Squirel</span>
+              <span class="fs-lg fw-300">Productions</span>
             </h1>
           </div>
            <h2 class="fs-med fw-300 hero-subtitle">Where rabid creativity abounds</h2>
@@ -124,15 +124,9 @@
                 <span>&#128071</span>
                   </a>
           </div>
-        <!-- </div> -->
-
-        
-         
-
-        
       </section>
       <section id="about" class="about about-grid">
-        <h3 class="about-header fs-sm upper">Meet The Squirrel <span class="wave">&#128075</span></h3>
+        <h3 class="about-header fs-med upper">Meet The Squirel <span class="wave">&#128075</span></h3>
         <div class="about-text">
           <p>Cheese on toast airedale the big cheese.</p>
           <p>
@@ -143,42 +137,15 @@
             Red leicester parmesan cheese and biscuits cheesy feet blue castello
             cheesecake.
           </p>
-          <p>Interested? <a href="#contact">Get in touch!</a></p>
+          <p>Interested? <a href="#contact" class="underline">Get in touch!</a></p>
         </div>
         <div class="about-image">
-          <div class="image-background">
-            <img
-              class="about-img"
-              src="./images/originaldsp-square.jpeg"
-              alt="man in squirrel shirt"
-            />
-            <p class="caption">The Right Hand Man</p>
           </div>
         </div>
-        <div class="testimonials">
-        <h3 class="fs-sm upper">The Word on the street</h3>
-        <div class="slides-container"> 
-          <article class="slide active">
-            <p>"No. <span>I</span> am your father"</p>
-            <p>Darth Vader</p>
-          </article>
-          <article class="slide">
-            <p>“Why, you stuck-up, half-witted, scruffy-looking nerf herder!”</p>
-            <p>Leia Organa</p>
-          </article>
-          <article class="slide">
-            <p>“There’s always a bigger fish.”</p>
-            <p>Qui-Gon Jinn</p>
-          </article>
-        </div>
-        <div class="slider-wrapper">
-          <input type="range" min="0" value="0" max="2" step="1" class="slider" id="range" />
-        </div>
-      </div>
       </section>
       
       <section id="work" class="work">
-        <h3 class="work-header fs-sm upper">The Squirrel creates videos. Lots of videos.</h3>
+        <h3 class="work-header fs-med upper">The squirel creates videos. Lots of videos.</h3>
         <!-- <h4 class="work-subheader fs-sm upper"></h4> -->
         <p>
            Danish fontina cheesy grin airedale danish fontina taleggio the big
@@ -186,20 +153,25 @@
           </p>
           <p>Edam fromage lancashire feta caerphilly!</p>
           
-         <h4 class="upper fs-xs teaser">Fancy a sneak-peak?</h4>
-         <div class="emoji-container">
-                <span class="sr-only">Scroll Down</span>
-                <span class="emoji">&#128071</span>
-                </div>
+         <h4 class="upper fs-sm teaser">Check out some of his most recent work &#128071</h4>
        <div class="video-container">
           <iframe src="https://www.youtube.com/embed/50u-hM41Dxo?showinfo=0;modestbranding=1;rel=0" title="Andalucia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen"></iframe>
+        </div>
+        <div class="other-work grid">
+          <div class="other-work--image">
+            <img src="./images/biking.jpg" alt="man mountain biking">
+          </div>
+          <div class="other-work--image">
+            <img src="./images/biking.jpg" alt="man mountain biking">
+          </div>
+          
         </div>
 
             <a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="btn btn-square">Show me more!</a>
 
       </section>
       <section id="services">
-        <h3 class="services-header fs-sm upper">With The Squirrel You Get:</h3>
+        <h3 class="services-header fs-med upper">With The Squirel You'll Get:</h3>
           <div class="services-container">
             <div class="service filming">
               <div class="illustration camera">
@@ -210,7 +182,7 @@
                   </div>
               </div>
               <div class="service-text">
-                <h4 class="fs-xs upper">Filming</h4>
+                <h4 class="fs-sm upper">Filming</h4>
               <p>Keeping up with the Kardashian mockumentary? GoPro down a mountain? You got it.</p>
               </div>
             </div>
@@ -230,8 +202,8 @@
                 </div>
               </div>
               <div class="service-text">
-                <h4 class="fs-xs upper">Editing</h4>
-              <p>With transitions that would make George Lucas proud, the Squirrel is a masterclass in editing.  </p>
+                <h4 class="fs-sm upper">Editing</h4>
+              <p>With transitions that would make George Lucas proud, the Squirel is a masterclass in editing.  </p>
               </div>
             </div>
             <div class="service soundtracks">
@@ -250,16 +222,36 @@
                 </div>
               </div>
               <div class="service-text">
-                <h4 class="fs-xs upper">Soundtracks</h4>
+                <h4 class="fs-sm upper">Soundtracks</h4>
               <p>A$AP Rocky? The unmistakable pipes of Celine herself -  the tunes are always on point. </p>
               </div>
               
             </div>
           </div>
       </section>
+      <section class="testimonials">
+        <h3 class="fs-med upper">The Word on the street</h3>
+        <div class="slides-container"> 
+          <article class="slide active">
+            <p>"No. <span>I</span> am your father"</p>
+            <p>Darth Vader</p>
+          </article>
+          <article class="slide">
+            <p>“Why, you stuck-up, half-witted, scruffy-looking nerf herder!”</p>
+            <p>Leia Organa</p>
+          </article>
+          <article class="slide">
+            <p>“There’s always a bigger fish.”</p>
+            <p>Qui-Gon Jinn</p>
+          </article>
+        </div>
+        <div class="slider-wrapper">
+          <input type="range" min="0" value="0" max="2" step="1" class="slider" id="range" />
+        </div>
+      </section>
       <section id="subscribe">
-        <h4 class="fs-sm upper">Become a Squirrelfriend</h4>
-        <p>Signup to our newsletter and keep up-to-date with all the Squirrel's (mis)adventures!</p>
+        <h4 class="fs-med upper">Become a Squirelfriend</h4>
+        <p>Signup to our newsletter and keep up-to-date with all the Squirel's (mis)adventures!</p>
         <div class="mailchimp-container">
           <!-- Begin Mailchimp Signup Form -->
           <div id="mc_signup">
@@ -296,7 +288,7 @@
                 <li class="social-item"><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></li>
                   <li class="social-item"><a href="#" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
             </ul>
-            <p class="footer-fineprint fs-xxs">© Dead Squirrel Productions 2022</p>
+            <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
       </div>
                
                 <!-- <div class="footer-location">
