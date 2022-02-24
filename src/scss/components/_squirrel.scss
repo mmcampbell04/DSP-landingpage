@@ -7,15 +7,9 @@
 }
 
 .cartoon-wrapper {
-  width: 60vmin;
-  height: 60vmin;
+  width: clamp(30vmin, 20vw, 45vmin);
+  height: clamp(30vmin, 20vw, 45vmin);
   position: relative;
-
-  @include breakpoint-up(large) {
-    width: 30vmin;
-    height: 30vmin;
-    left: 10%;
-  }
 }
 
 .cartoon div {
@@ -205,7 +199,7 @@
     var(--red) 75%,
     var(--pinkPurple) 75%
   );
-  border: 7px solid black;
+  border: 5px solid black;
 }
 
 .lens::before {
@@ -265,7 +259,7 @@
   height: 40%;
   border-radius: 100%;
   clip-path: inset(0 0 50% 0);
-  border: 6px solid black;
+  border: 5px solid black;
   top: 12%;
   left: 26%;
 }
@@ -277,17 +271,17 @@
   }
 
   .lens {
-    border: 4px solid black;
+    border: 3px solid black;
   }
 
   .bridge {
-    width: 9.75%;
-    border: 4px solid black;
-    left: 26.5%;
+    width: 11%;
+    border: 3px solid black;
+    left: 26%;
   }
 
   .freckles {
     left: 46%;
-    box-shadow: black 3.25vmin 0vmin, black 1.25vmin -2.75vmin;
+    box-shadow: black 2vmin 0vmin, black 1vmin -1.75vmin;
   }
 }
