@@ -12,46 +12,18 @@
   font-weight: bold;
 }
 
-.image-background {
-  align-self: center;
-  max-width: clamp(13em, 25vw + 1em, 60em);
-  cursor: pointer;
-  padding: 1em;
-  background: whitesmoke;
-  transform: rotate(5deg);
-  transition: all 0.35s;
-  -webkit-box-shadow: 12px 6px 11px -1px rgba(0, 0, 0, 0.42);
-  box-shadow: 12px 6px 11px -1px rgba(0, 0, 0, 0.42);
-
-  @include breakpoint-up(medium) {
-  }
-}
-
-.image-background:hover {
-  transform: rotate(0deg) scale(1.1, 1.1);
-}
-
-.caption {
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 0.75em;
-}
-
-.about-img {
+.about-image {
+  height: 25rem;
+  margin-top: 1em;
+  background-image: url(/src/images/originaldsp.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
   filter: grayscale(100%);
+  transform: rotate(5deg);
 }
 
-.image-background:hover .about-img {
+.about-image:hover {
+  transform: rotate(0deg) scale(1.1);
   filter: none;
-}
-
-.testimonials {
-  margin-top: 6em;
-  margin-inline: auto;
-  text-align: center;
-
-  @include breakpoint-up(medium) {
-    grid-area: testimonials;
-  }
 }

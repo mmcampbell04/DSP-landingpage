@@ -244,10 +244,7 @@
   top: 50%;
   transform: translateY(-50%);
   border-radius: 0.25em;
-  background: var(--white);
-  //   animation-duration: 1.2s;
-  //   animation-timing-function: ease-in-out;
-  //   animation-iteration-count: infinite;
+  background: var(--text-color);
 }
 
 // headphones on hover
@@ -258,7 +255,7 @@
 
 .soundwaves li:nth-of-type(1) {
   left: 0;
-  animation-delay: 0.25s;
+  animation-delay: 0.2s;
 }
 .soundwaves li:nth-of-type(2) {
   left: 20%;
@@ -276,26 +273,3 @@
   left: 80%;
   animation-delay: 1.25s;
 }
-
-// version 2soundwaves - no hover - too annoying!
-
-// .soundwaves li:nth-of-type(1) {
-//   left: 0;
-//   animation-name: small;
-// }
-// .soundwaves li:nth-of-type(2) {
-//   left: 20%;
-//   animation-name: medium;
-// }
-// .soundwaves li:nth-of-type(3) {
-//   left: 40%;
-//   animation-name: small;
-// }
-// .soundwaves li:nth-of-type(4) {
-//   left: 60%;
-//   animation-name: large;
-// }
-// .soundwaves li:nth-of-type(5) {
-//   left: 80%;
-//   animation-name: small;
-// }

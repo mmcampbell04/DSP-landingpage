@@ -3,9 +3,9 @@
 form {
   width: 100%;
 
-  @include breakpoint-up(medium) {
-    width: 60%;
-  }
+  // @include breakpoint-up(medium) {
+  //   width: 60%;
+  // }
 }
 
 .form-controls {
@@ -30,7 +30,7 @@ textarea.form-inputs {
   width: 100%;
 }
 
-input:focus,
+input[type="email"]:focus,
 textarea:focus {
   border: 3px solid var(--accent-color);
 }
@@ -52,11 +52,16 @@ textarea:focus {
 .mc-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .brandingLogo {
   width: 40%;
+
+  @include breakpoint-up(medium) {
+    margin-left: auto;
+    width: auto;
+  }
 }
 
 .mc-container input[type="submit"] {
