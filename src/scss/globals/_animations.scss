@@ -1,5 +1,29 @@
 // BUTTON ANIMATION
 
+.underline {
+  position: relative;
+}
+
+.underline:hover {
+  color: var(--text-accent);
+}
+
+.underline::before {
+  position: absolute;
+  content: "";
+  background-color: var(--accent-color);
+  width: 106%;
+  height: 0.2em;
+  left: -3%;
+  bottom: -2%;
+  transition: all 0.25s ease-in;
+  z-index: -1000;
+}
+
+.underline:hover::before {
+  height: 100%;
+}
+
 @-webkit-keyframes pulsate-bck {
   0% {
     -webkit-transform: scale(1);
