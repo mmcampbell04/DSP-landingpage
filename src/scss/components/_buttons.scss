@@ -12,34 +12,26 @@
   display: grid;
   place-items: center;
 
-  @include breakpoint-up(medium) {
+  @include breakpoint-up(large) {
     font-size: 2.5rem;
   }
 }
 
-.btn:hover {
+.btn span:hover,
+.btn span:focus {
+  transform: scale(1.2);
+}
+
+.btn:hover,
+.btn:focus,
+.btn-scroll:hover,
+.btn-scroll:focus {
   transform: scale(1.1);
 }
 
 .btn-scroll {
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
   -webkit-animation: pulsate-bck 2s ease-in-out infinite both;
   animation: pulsate-bck 2s ease-in-out infinite both;
-  transition: background 500ms ease-in-out;
-}
-
-.btn-scroll:hover {
-  background: var(--accent-color);
-}
-
-// scroll down button
-.btn-scroll--down {
-  width: 12vmin;
-
-  @include breakpoint-up(large) {
-    width: 8vmin;
-  }
 }
 
 // our work button
