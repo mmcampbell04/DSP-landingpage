@@ -1,5 +1,10 @@
 @use "../globals/" as *;
 
+header,
+footer {
+  grid-column: 1 / -1;
+}
+
 .flex {
   display: flex;
 }
@@ -13,26 +18,21 @@
 }
 
 nav {
-  margin-inline: auto;
-  padding: 1.5em 3em;
-
-  @include breakpoint-up(medium) {
-    padding: 2.5em 3em;
-  }
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: background 500ms ease-in-out, color 200ms ease;
+  padding: 2.5em 5em;
 }
 
-main,
-footer {
-  display: grid;
-  grid-template-columns: minmax(1em, 1fr) minmax(0px, 90em) minmax(1em, 1fr);
+main {
+  grid-column: 2/-2;
+  padding-inline: clamp(0rem, 5vw, 3.75rem);
 }
 
 section {
-  grid-column: 2/-2;
   margin-top: 9em;
-  @include breakpoint-up(medium) {
-    padding: 0 4em;
-  }
 
   @include breakpoint-up(large) {
     margin-top: 12em;
@@ -40,55 +40,43 @@ section {
 }
 
 // HERO
-
 .hero {
   margin-top: 10em;
   display: grid;
-  place-items: center;
-  row-gap: 1.25em;
-
-  @include breakpoint-up(large) {
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-  }
+  grid-template-columns: max-content 1.25fr;
 }
 
 .hero-title {
-  text-align: center;
-
-  @include breakpoint-up(large) {
-    margin-top: 1.5em;
-    text-align: left;
-    place-self: center;
-  }
+  place-self: center;
 }
 
 .hero-subtitle {
-  padding-inline: 1em;
-
-  @include breakpoint-up(large) {
-    grid-column: 1 / -1;
-  }
+  grid-column: 1 / -1;
 }
 
 .hero-btn {
-  @include breakpoint-up(large) {
-    grid-column: 1 / -1;
-  }
+  margin-top: 1.5em;
+  grid-column: 1 / -1;
+  place-self: center;
 }
 
 // ABOUT
-
 .about-grid {
   display: grid;
 
   @include breakpoint-up(medium) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content 1fr;
+    row-gap: 1em;
+    grid-template-areas:
+      "title title title"
+      "text text photo";
+  }
+
+  @include breakpoint-up(large) {
     grid-template-areas:
       "title title photo"
-      "text text photo"
-      "testimonials testimonials testimonials";
+      "text text photo";
   }
 }
 
@@ -109,7 +97,7 @@ section {
   }
 }
 
-.about-text > p {
+.about-text :not(:first-child) {
   margin-top: 1em;
 }
 
@@ -121,28 +109,21 @@ section {
   @include breakpoint-up(medium) {
     grid-area: photo;
     margin-top: 0;
-    justify-content: flex-end;
   }
 }
 
 // WORK/VIDEO SECTION
 .work > p {
-  margin-top: 1rem;
+  margin-top: 1em;
 }
 
 .teaser {
   text-align: center;
-  margin-block: 3rem 2rem;
-  position: relative;
-}
-
-.emoji-container {
-  display: flex;
-  justify-content: center;
+  margin-top: 3em;
 }
 
 .video-container {
-  margin-top: 3rem;
+  margin-top: 5em;
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
@@ -155,6 +136,17 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.other-work {
+  margin-top: 6em;
+  display: grid;
+  width: 100%;
+
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
 }
 
 // SERVICES
@@ -176,13 +168,13 @@ section {
 }
 
 .service-text p {
-  @include breakpoint-up(medium) {
-    padding-inline: 3em;
-  }
+  max-width: 35ch;
+  margin-inline: auto;
+}
 
-  @include breakpoint-up(large) {
-    padding-inline: 1em;
-  }
+.testimonials {
+  margin-inline: auto;
+  text-align: center;
 }
 
 // FOOTER
