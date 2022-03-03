@@ -9,6 +9,10 @@ footer {
   display: flex;
 }
 
+.margin-left {
+  margin-left: 0.5em;
+}
+
 // in nav & footer
 .logo {
   background-image: url(/src/images/DSP-logo-black.png);
@@ -19,11 +23,10 @@ footer {
 
 nav {
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  padding: 2.5em 4em;
   z-index: 100;
   transition: background 500ms ease-in-out, color 200ms ease;
-  padding: 2.5em 5em;
 }
 
 main {
@@ -33,17 +36,27 @@ main {
 
 section {
   margin-top: 9em;
+  scroll-margin-top: 100px;
 
   @include breakpoint-up(large) {
     margin-top: 12em;
+    scroll-margin-top: 120px;
+  }
+
+  @include breakpoint-up(xlarge) {
+    margin-top: 17em;
   }
 }
 
 // HERO
 .hero {
-  margin-top: 10em;
+  margin-top: 21em;
   display: grid;
   grid-template-columns: max-content 1.25fr;
+
+  @include breakpoint-up(medium) {
+    margin-top: 12em;
+  }
 }
 
 .hero-title {
@@ -94,6 +107,7 @@ section {
 
   @include breakpoint-up(large) {
     margin-top: 1em;
+    padding-right: 8em;
   }
 }
 
@@ -101,36 +115,52 @@ section {
   margin-top: 1em;
 }
 
-.about-image {
-  display: flex;
-  margin-top: 4em;
-  justify-content: center;
-
-  @include breakpoint-up(medium) {
-    grid-area: photo;
-    margin-top: 0;
-  }
-}
-
 // WORK/VIDEO SECTION
 .work > p {
   margin-top: 1em;
 }
 
-.teaser {
-  text-align: center;
-  margin-top: 3em;
+.cards-grid {
+  margin-top: 6em;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "video"
+    "strapline"
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "last";
+  gap: 1em;
+
+  @include breakpoint-up(medium) {
+    grid-template-areas:
+      "video video video"
+      "strapline strapline strapline"
+      "last first first"
+      "second first first"
+      "third fifth fourth";
+  }
+
+  @include breakpoint-up(large) {
+    grid-template-areas:
+      "video video video"
+      "strapline strapline strapline"
+      "first second third"
+      "last fourth fourth"
+      "fifth fourth fourth";
+  }
 }
 
-.video-container {
-  margin-top: 5em;
+.card-video {
+  grid-area: video;
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
+  height: clamp(13em, 70vh, 41em);
 }
 
-.video-container iframe {
+.card-video iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -138,15 +168,76 @@ section {
   height: 100%;
 }
 
-.other-work {
-  margin-top: 6em;
-  display: grid;
-  width: 100%;
+.cards-grid h4 {
+  grid-area: strapline;
+  text-align: center;
+  padding-block: 2em;
 
-  @include breakpoint-up(large) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+  @include breakpoint-up(medium) {
+    padding-block: 4em;
   }
+}
+
+.card:nth-of-type(2) {
+  grid-area: first;
+}
+.card:nth-of-type(3) {
+  grid-area: second;
+}
+.card:nth-of-type(4) {
+  grid-area: third;
+}
+
+.card:nth-of-type(5) {
+  grid-area: fourth;
+}
+
+.card:nth-of-type(6) {
+  grid-area: last;
+}
+
+.card {
+  display: grid;
+}
+
+.card > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  border-radius: 5px;
+}
+
+.card-img {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+
+  @include breakpoint-up(medium) {
+    aspect-ratio: 1/ 1.25;
+  }
+}
+
+.card-content {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  font-family: var(--ff-josefin);
+  font-weight: 800;
+  color: #f8f8ff;
+  cursor: pointer;
+
+  transition: all 0.5ms ease-in-out;
+
+  @include breakpoint-up(medium) {
+    text-align: center;
+    padding-inline: 1.25em;
+  }
+}
+
+.card-content:focus,
+.card-content:hover {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
 }
 
 // SERVICES
