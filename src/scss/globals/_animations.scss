@@ -1,7 +1,8 @@
-// BUTTON ANIMATION
-
+// link animations
 .underline {
   position: relative;
+  font-weight: 700;
+  box-sizing: border-box;
 }
 
 .underline:hover {
@@ -9,6 +10,7 @@
 }
 
 .underline::before {
+  box-sizing: border-box;
   position: absolute;
   content: "";
   background-color: var(--accent-color);
