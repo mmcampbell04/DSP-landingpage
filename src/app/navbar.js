@@ -37,36 +37,6 @@ export function setFixedNav() {
   }
 }
 
-// // scroll to specific section on link click
-// export function getScrollHeight(e) {
-//   // prevent default behaviour
-//   e.preventDefault();
-//   // scroll to specific spot based on the href and removing the #
-//   const id = e.currentTarget.getAttribute("href").slice(1);
-//   console.log(id);
-//   const domElement = document.getElementById(id);
-//   console.log(domElement);
-
-//   const navHeight = navbar.getBoundingClientRect().height;
-//   console.log(navHeight);
-//   const fixedNav = navbar.classList.contains("fixed-nav");
-//   //   if the navbar IS fixed, subtract the navheight as its fixed, so its taken out of the normal flow & height of the document
-//   let position = domElement.offsetTop - navHeight;
-
-//   // if the nav is NOT fixed (i.e. user at the veryt op of the page)
-//   if (!fixedNav) {
-//     position = position - navHeight;
-//   }
-
-//   window.scrollTo({
-//     left: 0,
-//     top: position,
-//   });
-
-//   //   close mobile menu
-//   closeMobileNav();
-// }
-
 export function closeMobileNav() {
   navLinks.setAttribute("data-visible", false);
   navToggle.setAttribute("aria-expanded", false);

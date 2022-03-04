@@ -1,5 +1,10 @@
 import { checkAndSetTheme } from "./colorTheme";
-import { setFixedNav, getScrollHeight, activateMobileMenu } from "./navbar";
+import {
+  setFixedNav,
+  getScrollHeight,
+  activateMobileMenu,
+  closeMobileNav,
+} from "./navbar";
 import { getSliderRange } from "./slider";
 
 // COLOR THEME LOGIC
@@ -15,9 +20,10 @@ navToggle.addEventListener("click", activateMobileMenu);
 // ADDING SMOOTH SCROLLING DOWN TO DIFFERENT SECTIONS
 const scrollLinks = document.querySelectorAll("[data-link]");
 scrollLinks.forEach((link) => {
-  link.addEventListener("click", getScrollHeight);
+  link.addEventListener("click", closeMobileNav);
 });
 
 // testimonials slides
 const slider = document.getElementById("range");
+
 slider.addEventListener("change", getSliderRange);
