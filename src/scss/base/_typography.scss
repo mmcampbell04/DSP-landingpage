@@ -71,9 +71,13 @@ p {
 }
 
 // SPECIFICS
-
 .emoji {
   font-size: 2rem;
+}
+
+.about-text p:first-of-type,
+.about-text p:last-of-type {
+  font-weight: bold;
 }
 
 address a {
