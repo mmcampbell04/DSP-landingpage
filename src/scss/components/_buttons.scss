@@ -35,9 +35,10 @@
 }
 
 // our work button
-.btn-square {
+.btn-primary {
   background: var(--accent-color);
-  max-width: 12rem;
+  width: 100%;
+  max-width: 13em;
   border-radius: 40px;
   font-size: 1rem;
   font-weight: bold;
@@ -46,6 +47,11 @@
   color: var(--bkg-color);
   margin-inline: auto;
   margin-top: 4em;
+}
+
+.btn-secondary {
+  @extend .btn-primary;
+  max-width: 10em;
 }
 
 // back to top button
