@@ -103,6 +103,13 @@
   }
 }
 
+.wave {
+  -webkit-animation: wave 2.5s infinite;
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
 // waving hand
 @keyframes wave {
   0% {
