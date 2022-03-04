@@ -26,12 +26,11 @@ nav {
   align-items: center;
   padding: 2.5em 4em;
   z-index: 100;
-  transition: background 500ms ease-in-out, color 200ms ease;
 }
 
 main {
   grid-column: 2/-2;
-  padding-inline: clamp(0rem, 5vw, 3.75rem);
+  padding-inline: clamp(0px, 5vw, 3.75rem);
 }
 
 section {
@@ -102,7 +101,8 @@ section {
 .about-image {
   height: 50vh;
   width: 100%;
-  margin-top: 4em;
+  margin: 4em auto;
+  background-position-x: center;
   background-image: url(/src/images/originaldsp.jpeg);
   background-repeat: no-repeat;
   background-size: 90%;
@@ -133,19 +133,18 @@ section {
   }
 }
 
-.about-text :not(:first-child) {
-  margin-top: 1em;
+.about-text p {
+  margin-top: 1.5em;
 }
 
 // WORK/VIDEO SECTION
 .work > p {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .cards-grid {
-  margin-top: 6em;
+  margin-top: 4em;
   display: grid;
-  grid-auto-columns: 1fr;
   grid-template-areas:
     "video"
     "strapline"
@@ -178,8 +177,8 @@ section {
 .card-video {
   grid-area: video;
   position: relative;
-  width: 100%;
-  height: clamp(13em, 70vh, 41em);
+  padding-top: 56.25%;
+  overflow: hidden;
 }
 
 .card-video iframe {
@@ -193,11 +192,7 @@ section {
 .cards-grid h4 {
   grid-area: strapline;
   text-align: center;
-  padding-block: 2em;
-
-  @include breakpoint-up(medium) {
-    padding-block: 4em;
-  }
+  padding-block: 4em;
 }
 
 .card:nth-of-type(2) {
@@ -310,7 +305,7 @@ footer {
   @include breakpoint-up(medium) {
     padding: 0 4em;
     align-items: center;
-    row-gap: 2.5em;
+    row-gap: 1.5em;
   }
 }
 
