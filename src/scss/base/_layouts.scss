@@ -145,6 +145,7 @@ section {
 .cards-grid {
   margin-top: 4em;
   display: grid;
+  grid-auto-columns: 1fr;
   grid-template-areas:
     "video"
     "strapline"
@@ -228,7 +229,7 @@ section {
   aspect-ratio: 1/1;
 
   @include breakpoint-up(medium) {
-    aspect-ratio: 1/ 1.25;
+    aspect-ratio: 1 / 1.25;
   }
 }
 
@@ -242,7 +243,6 @@ section {
   font-weight: 800;
   color: #f8f8ff;
   cursor: pointer;
-
   transition: all 0.5ms ease-in-out;
 
   @include breakpoint-up(medium) {
