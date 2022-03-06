@@ -17,10 +17,6 @@
   --accent-color: #ec058e;
   --illustration-primary: #222;
   --illustration-secondary: #ec058e;
-
-  //   squirrel animation
-  // --squirrel: #5f5d5d;
-  // --squirrelAccents: #cdcaca;
   --orange: #eca928;
   --yellow: #edde4c;
   --red: #fd689a;
@@ -32,7 +28,6 @@
 
   //   basic
   --white: rgb(255, 255, 255);
-  --transparent: transparent;
   --black: #000000;
 
   // toggle sizing
@@ -47,11 +42,11 @@
   --ff-titillium: "Titillium Web", sans-serif;
 
   // font-sizes
-  --fs-body: 1rem;
+  --fs-body: clamp(1rem, 3vw, 1.25rem);
   --fs-xxs: clamp(0.5rem, 5vw, 0.75rem);
   --fs-xs: clamp(0.75rem, 5vw, 0.9rem);
   --fs-sm: clamp(1.25rem, 3vw, 1.75rem);
-  --fs-med: clamp(1.5rem, 5vw, 3rem); //subheader
+  --fs-med: clamp(1.425rem, 5vw, 3rem); //subheader
   --fs-lg: clamp(1.5rem, 7.75vw, 6.25rem); //header
 }
 
