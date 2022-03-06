@@ -9,7 +9,7 @@
   color: var(--text-accent);
 }
 
-.underline::before {
+.underline::after {
   box-sizing: border-box;
   position: absolute;
   content: "";
@@ -22,7 +22,7 @@
   z-index: -1000;
 }
 
-.underline:hover::before {
+.underline:hover::after {
   height: 100%;
 }
 
