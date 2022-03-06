@@ -7,8 +7,8 @@
 }
 
 .cartoon-wrapper {
-  width: clamp(30vmin, 20vw, 45vmin);
-  height: clamp(30vmin, 20vw, 45vmin);
+  width: clamp(25vmin, 20vw, 45vmin);
+  height: clamp(25vmin, 20vw, 45vmin);
   position: relative;
 }
 
@@ -199,7 +199,7 @@
     var(--red) 75%,
     var(--pinkPurple) 75%
   );
-  border: 5px solid black;
+  border: 6px solid black;
 }
 
 .lens::before {
@@ -242,7 +242,7 @@
 }
 
 .arm.right {
-  left: 63%;
+  left: 62%;
 }
 
 .arm::before {
@@ -255,13 +255,13 @@
 }
 
 .bridge {
-  width: 10.75%;
-  height: 40%;
+  width: 9%;
+  height: 36%;
   border-radius: 100%;
   clip-path: inset(0 0 50% 0);
-  border: 5px solid black;
-  top: 12%;
-  left: 26%;
+  border: 6px solid black;
+  top: 16%;
+  left: 27%;
 }
 
 @media (max-width: 35em) {
