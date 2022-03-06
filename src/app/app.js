@@ -1,14 +1,11 @@
 import { checkAndSetTheme } from "./colorTheme";
-import {
-  setFixedNav,
-  getScrollHeight,
-  activateMobileMenu,
-  closeMobileNav,
-} from "./navbar";
+import { setFixedNav, activateMobileMenu, closeMobileNav } from "./navbar";
 import { getSliderRange } from "./slider";
+import { getWeekDay } from "./weekday";
 
+getWeekDay();
 // COLOR THEME LOGIC
-checkAndSetTheme();
+window.addEventListener("DOMContentLoaded", checkAndSetTheme);
 
 // SET FIXED NAVBAR
 window.addEventListener("scroll", setFixedNav);
@@ -17,7 +14,7 @@ window.addEventListener("scroll", setFixedNav);
 const navToggle = document.querySelector(".mobile-nav-toggle");
 navToggle.addEventListener("click", activateMobileMenu);
 
-// ADDING SMOOTH SCROLLING DOWN TO DIFFERENT SECTIONS
+// CLOSE MOBILE NAV WHEN LINK IS CLICKED
 const scrollLinks = document.querySelectorAll("[data-link]");
 scrollLinks.forEach((link) => {
   link.addEventListener("click", closeMobileNav);
@@ -25,5 +22,4 @@ scrollLinks.forEach((link) => {
 
 // testimonials slides
 const slider = document.getElementById("range");
-
 slider.addEventListener("change", getSliderRange);
