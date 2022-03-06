@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get in Touch!</title>
+    <script
+      src="https://kit.fontawesome.com/3376c03b9c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../src/scss/styles.scss" />
+    <link
+      href="//cdn-images.mailchimp.com/embedcode/slim-10_7_dtp.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
+    </style>
+    <script type="module" defer src="../src/app/contact.js"></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body id="contact" class="contact-page">
+    <header>
+      <nav id="nav" class="flex">
+        <div class="mobile-nav-toggle hide-for-desktop" id="mobile-nav-toggle">
+          <div
+            id="hamburger-menu"
+            class="hamburger-menu"
+            aria-controls="nav-links-container"
+            aria-expanded="false"
+          ></div>
+          <span class="sr-only">Menu</span>
+        </div>
+
+        <div
+          id="nav-links-container"
+          class="nav-links-container flex"
+          data-visible="false"
+        >
+          <div class="logo nav-logo"></div>
+          <ul class="nav-links flex">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a data-link="scroll" href="index.html#about">About</a>
+            </li>
+            <li><a data-link="scroll" href="index.html#work">Work</a></li>
+            <li><a data-link="scroll" href="index.html#services">Services</a></li>
+          </ul>
+          <div class="toggle-container">
+            <!-- <audio
+              type="audio/wav"
+              id="audio"
+              autoplay="0"
+              autostart="0"
+              src="./images/mixkit-cool-interface-click-tone-2568.wav"
+            ></audio> -->
+            <span class="sr-only">Enable dark mode</span>
+            <input class="checkbox" type="checkbox" id="toggle" name="theme" />
+            <label class="label" for="toggle">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="contact" class="contact-us">
+        <h1 class="contact-header fs-lg">Let's Chat!</h1>
+        <p class="contact-text">If you're interested in working with The Squirel, want to join the team or just say keen to say hi, send a message and he'll get back to ASAP.
+          <br>
+          <br>
+          Prefer face-to-face? Visit our <a href="https://goo.gl/maps/yRwFHK9hcfpBCmRh6" class="underline">Montreal</a> office in the summer months and our <a href="https://goo.gl/maps/KNjxb2DzMBBtjUgG9" class="underline">European HQ</a> from November - March. Even Squirels are struggling with Canadian winters now...</p>
+       
+        <div class="contact-page cartoon-wrapper">
+            <div class="cartoon">
+              <div class="ears left a"></div>
+              <div class="ears right a"></div>
+              <div class="hair a b"></div>
+              <!-- FACE   -->
+              <div class="face a b">
+                <div class="eye a b"></div>
+                <div class="eye a b"></div>
+                <div class="cheek left a"></div>
+                <div class="cheek right a"></div>
+                <div class="freckles"></div>
+                <div class="nose"></div>
+                <div class="mouth left"></div>
+                <div class="mouth right"></div>
+                <div class="teeth a"></div>
+              </div>
+
+              <!-- sunglasses   -->
+              <div class="sunglasses">
+                <div class="lens left b"></div>
+                <div class="lens right b"></div>
+                <div class="arm left b a"></div>
+                <div class="arm right b a"></div>
+                <div class="bridge"></div>
+              </div>
+            </div>
+          </div>
+       
+        <form class="form--contact">
+          <label for="name">
+            <input
+              type="text"
+              name="name"
+              class="form-controls"
+              placeholder="Name..."
+            />
+          </label>
+          <label for="email">
+            <input
+              type="email"
+              name="email"
+              class="form-controls"
+              placeholder="Email..."
+            />
+          </label>
+          <label for="message">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message here..."
+              class="form-controls"
+              rows="8"
+            ></textarea>
+          </label>
+          <button class="btn btn-secondary">Send</button>
+        </form>
+      </section>
+    </main>
+      <footer class="footer footer-contact">
+      <div class="footer-main">
+         <div class="logo footer-logo"></div>
+          
+            <ul class="social-list">
+                <li class="social-item"><a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social-item"><a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link"><i class="fab fa-youtube"></i></a></li>
+                  <li class="social-item"><a href="https://twitter.com/" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
+            </ul>
+           
+            <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
+             <p data-date="weekday" class="footer-fineprint fs-xs"></p>
+      </div>
+    </footer>
+
+    <!-- <div class="footer-location">
+                    <h4 class="footer-text-header upper">Montreal Office</h4>
+                    <address>
+                      <a href="https://goo.gl/maps/yRwFHK9hcfpBCmRh6">93 Saint-Catherine St W                                   H2X 1Z7</a>
+                    </address>
+                    </div>
+                    <div class="footer-location">
+                      <h4 class="footer-text-header upper">London Office</h4>
+                    <address>
+                      <a href="https://goo.gl/maps/KNjxb2DzMBBtjUgG9"
+                        >Unit CG08 Kings Cross Station
+                        N1C 9AP</a>
+                    </address>
+      
+      
+      
+      
+                  </div> -->
+  </body>
+</html>

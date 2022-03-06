@@ -1,0 +1,68 @@
+@use "../globals/" as *;
+
+// re-size specific page
+.contact-page {
+  grid-template-columns: minmax(1em, 1fr) minmax(0px, 70em) minmax(1em, 1fr);
+}
+
+section.contact-us {
+  margin-top: 10em;
+  display: grid;
+  gap: 1em;
+  grid-template-areas:
+    "header"
+    "text"
+    "cartoon"
+    "form";
+
+  @include breakpoint-up(medium) {
+    column-gap: 2em;
+    grid-template-areas:
+      "header cartoon"
+      "text cartoon"
+      "form form ";
+  }
+}
+
+.contact-header {
+  grid-area: header;
+  line-height: 1;
+  align-self: center;
+}
+
+.contact-text {
+  grid-area: text;
+}
+
+.contact-page .cartoon-wrapper {
+  grid-area: cartoon;
+  place-self: center;
+  width: 35vmin;
+  height: 35vmin;
+}
+
+.contact-page .cartoon-wrapper .lens {
+  -webkit-animation: color-change-5x 3s ease-in-out infinite alternate both;
+  animation: color-change-5x 3s ease-in-out infinite alternate both;
+}
+
+.form--contact {
+  margin-top: 2em;
+  grid-area: form;
+}
+
+.form--contact input[name="name"] {
+  margin-block: 0 0.5em;
+}
+
+.form--contact textarea {
+  height: 16em;
+}
+
+.form--contact button {
+  margin-top: 3em;
+}
+
+.footer-contact {
+  margin-top: 6em;
+}

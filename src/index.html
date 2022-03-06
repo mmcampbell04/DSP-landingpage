@@ -65,10 +65,10 @@
             <li><a data-link="scroll" href="#about">About</a></li>
             <li><a data-link="scroll" href="#work">Work</a></li>
             <li><a data-link="scroll" href="#services">Services</a></li>
-            <li><a data-link="scroll" href="#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
           <div class="toggle-container">
-            <audio id="audio" src="./images/mixkit-cool-interface-click-tone-2568.wav" autoplay="false"></audio>
+             <!-- <audio type="audio/wav" autoplay="0" autostart="0" id="audio" src="./images/mixkit-cool-interface-click-tone-2568.wav"  ></audio> -->
             <span class="sr-only">Enable dark mode</span>
             <input class="checkbox" type="checkbox" id="toggle" name="theme" />
             <label class="label" for="toggle">
@@ -128,16 +128,15 @@
       <section id="about" class="about about-grid">
         <h3 class="about-header fs-med upper">Meet The Squirel <span class="wave">&#128075</span></h3>
         <div class="about-text">
-          <p>Cheese on toast airedale the big cheese.</p>
+          <p>The artist formerly known as 'The Squirel' AKA 'DSP' AKA 'DS Productions' is the brainchild of Keith Barnett. </p>
           <p>
-            Danish fontina cheesy grin airedale danish fontina taleggio the big
-            cheese macaroni.Edam fromage lancashire feta caerphilly everyone loves chalk.
+            Dead Squirel Productions was born on a cold Canadian winter's night, from reams of holiday photos and video content, ready access to Youtube and the drive of 'why not?'. 
+            DSP is now a recognised production house in Keith's adopted hometown, <a href="https://goo.gl/maps/yRwFHK9hcfpBCmRh6" class="underline">Montreal</a>. 
           </p>
           <p>
-            Red leicester parmesan cheese and biscuits cheesy feet blue castello
-            cheesecake.
+            Courtesy of the Squirel's East London roots, DSP also has offices in central <a href="https://goo.gl/maps/KNjxb2DzMBBtjUgG9" class="underline">London</a> as well as Spain.
           </p>
-          <p>Interested? <a href="#contact" class="underline">Get in touch!</a></p>
+          <p>Want to collaborate?<a href="contact.html" class="underline margin-left">Get in touch!</a></p>
         </div>
         <div class="about-image">
           </div>
@@ -146,32 +145,48 @@
       
       <section id="work" class="work">
         <h3 class="work-header fs-med upper">The squirel creates videos. Lots of videos.</h3>
-        <!-- <h4 class="work-subheader fs-sm upper"></h4> -->
         <p>
-           Danish fontina cheesy grin airedale danish fontina taleggio the big
-            cheese macaroni.Edam fromage lancashire feta caerphilly everyone loves chalk.Cheese on toast airedale the big cheese.
+           The Squirel's specialities include stunning  holiday videos, showcasing the beauty as well as the behind the scenes of 'dream destinations' all across the globe. 
           </p>
-          <p>Edam fromage lancashire feta caerphilly!</p>
-          
-         <h4 class="upper fs-sm teaser">Check out some of his most recent work &#128071</h4>
-       <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/50u-hM41Dxo?showinfo=0;modestbranding=1;rel=0" title="Andalucia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen"></iframe>
+          <p>He's equally at home getting down and dirty with a Go-Pro for intense action (and accident...) shots. </p>
+       
+          <!-- showcase of other work in grid -->
+        <div class="cards-grid">
+          <div class="card-video"> 
+        <iframe src="https://www.youtube.com/embed/W6vczrH937U?" title="Andalucia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="other-work grid">
-          <div class="other-work--image">
-            <img src="./images/biking.jpg" alt="man mountain biking">
+        <h4 class="upper fs-sm teaser">Check out other recent work &#128071</h4>
+          <div class="card">
+            <img class="card-img first" loading="lazy" src="./images/japan.jpeg" alt="tori gates kyoto">
+              <a href="https://youtu.be/vzdYmnPOWDo" class="card-content">Exploring Japan</a>
+           </div>
+          <div class="card">
+            <img class="card-img second" loading="lazy" src="./images/biking.jpg" alt="man mountain biking">
+              <a href="https://youtu.be/739rgW4RXAY" class="card-content">Go-Pro Down a Mountain </a>
           </div>
-          <div class="other-work--image">
-            <img src="./images/biking.jpg" alt="man mountain biking">
+           <div class="card">
+            <img class="card-img third" loading="lazy" src="./images/mtl-grafitti.jpg" alt="leonard cohen grafitti montreal">
+              <a href="https://youtu.be/2YbHyG14nyg" class="card-content">Bonjour/Hi!</a>
           </div>
-          
+          <div class="card">
+            <img class="card-img fourth" loading="lazy" src="./images/gokarts.jpg" alt="kids go karting">
+              <a href="" class="card-content">2021 Go-Kart Grand Prix</a>
+          </div>
+          <div class="card">
+            <img class="card-img fifth" loading="lazy" src="./images/gator.jpg" alt="everglades">
+            <a href="https://youtu.be/Dlxm-SGdnNA" class="card-content">Gliding Round the Glades</a>            
+          </div>
+           <div class="card">
+            <img class="card-img last" loading="lazy" src="./images/flamenco.jpg" alt="flameco dancer">
+            <a href="https://youtu.be/50u-hM41Dxo" class="card-content">The Art of Flameco</a>
+          </div>
         </div>
 
-            <a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="btn btn-square">Show me more!</a>
+            <a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="btn btn-primary">Show me more!</a>
 
       </section>
       <section id="services">
-        <h3 class="services-header fs-med upper">With The Squirel You'll Get:</h3>
+        <h3 class="services-header fs-med upper">The Squirel Does:</h3>
           <div class="services-container">
             <div class="service filming">
               <div class="illustration camera">
@@ -230,19 +245,19 @@
           </div>
       </section>
       <section class="testimonials">
-        <h3 class="fs-med upper">The Word on the street</h3>
+        <h3 class="fs-med upper">But Don't take our Word for it</h3>
         <div class="slides-container"> 
           <article class="slide active">
-            <p>"No. <span>I</span> am your father"</p>
-            <p>Darth Vader</p>
+            <p>"We can always rely on the Squirel to provide a full 24/7 filming experience. Merci bien!" </p>
+            <p>Denis Villeneuve</p>
           </article>
           <article class="slide">
-            <p>“Why, you stuck-up, half-witted, scruffy-looking nerf herder!”</p>
-            <p>Leia Organa</p>
+            <p>“The Squirel created one of the best travel vlogs for Japan. Definitely couldn't have done it without his skills."</p>
+            <p>Lonely Planet (2019)</p>
           </article>
           <article class="slide">
-            <p>“There’s always a bigger fish.”</p>
-            <p>Qui-Gon Jinn</p>
+            <p>Awesome videography for our mountain-biking website & socials - sales have skyrocketed!"</p>
+            <p>Sports Experts</p>
           </article>
         </div>
         <div class="slider-wrapper">
@@ -263,7 +278,7 @@
                   <input type="text" name="b_30b4e8e4bdb6d6db6845bd0b3_2f4ec8c052" tabindex="-1" value=""></div>
                    <p class="fs-xxs">By subscribing, you agree with Mailchimp's <a href="">Terms</a> & <a hrf="/">Privacy Policy</a></p>    
                   <div class="mc-container">
-                          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-square">
+                          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary">
                           <p class="brandingLogo"><a href="http://eepurl.com/hTTRuH" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
                       </div>
                 </div>
@@ -283,33 +298,17 @@
          <div class="logo footer-logo"></div>
           
             <ul class="social-list">
-                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
-                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></li>
-                  <li class="social-item"><a href="#" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
+                <li class="social-item"><a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social-item"><a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link"><i class="fab fa-youtube"></i></a></li>
+                  <li class="social-item"><a href="https://twitter.com/" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
             </ul>
+           
             <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
+             <p data-date="weekday" class="footer-fineprint fs-xs"></p>
       </div>
-               
-                <!-- <div class="footer-location">
-                    <h4 class="footer-text-header upper">Montreal Office</h4>
-                    <address>
-                      <a href="https://goo.gl/maps/yRwFHK9hcfpBCmRh6">93 Saint-Catherine St W                                   H2X 1Z7</a>
-                    </address>
-                    </div>
-                    <div class="footer-location">
-                      <h4 class="footer-text-header upper">London Office</h4>
-                    <address>
-                      <a href="https://goo.gl/maps/KNjxb2DzMBBtjUgG9"
-                        >Unit CG08 Kings Cross Station
-                        N1C 9AP</a>
-                    </address>
-                    </div> -->
-                    
-                
-               
-        </footer>
-    <a class="btn btn-scroll btn-scroll--up" data-link="scroll" id="btn-up" href="#home">
+    </footer>
+      <a class="btn btn-scroll btn-scroll--up" data-link="scroll" id="btn-up" href="#home">
         <span>&#128070;</span>
       </a>
   </body>
