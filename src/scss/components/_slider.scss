@@ -2,17 +2,17 @@
 
 .slides-container {
   display: flex;
-  height: 9rem;
+  height: 12em;
   overflow: hidden;
   position: relative;
 
-  @include breakpoint-up(medium) {
-    height: 7rem;
-  }
+  // @include breakpoint-up(medium) {
+  //   height: 7rem;
+  // }
 
-  @include breakpoint-up(large) {
-    height: 10rem;
-  }
+  // @include breakpoint-up(large) {
+  //   height: 10rem;
+  // }
 }
 
 .slide {
@@ -36,7 +36,7 @@
 }
 
 .slide > p:first-child {
-  letter-spacing: 4px;
+  letter-spacing: 2.5px;
 }
 
 .slide > p:nth-child(2) {
@@ -54,7 +54,7 @@ input[type="range"] {
   appearance: none;
   background: transparent;
   cursor: pointer;
-  width: 15rem;
+  width: 9em;
 }
 
 /***** Track Styles *****/
