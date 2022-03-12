@@ -8,7 +8,7 @@ I was given carte-blanche for the content and design, and the DSP "brand" is whi
 
 This is the first full webpage I designed (though with inspiraiton from Jhey Thompkins, Frontend Joe, Coder Coder) and developed. I wanted it to be a playground and test field for my CSS skills. I built a lot of custom animations & CSS artwork courtesy of far too many hours on Codepen.
 
-This is still a work in progress but the live site is here: https://mmcampbell04.github.io/DSP-landingpage/
+This is still a work in progress but the live site is here: https://mmcampbell04.github.io/Dead-Squirel-Productions/
 
 ## What I've learned so far:
 
