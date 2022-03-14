@@ -13,6 +13,6 @@ function getActiveSlide(slideValue) {
 }
 
 export function getSliderRange(e) {
-  slideValue = parseFloat(e.target.value);
+  let slideValue = parseFloat(e.target.value);
   getActiveSlide(slideValue);
 }
