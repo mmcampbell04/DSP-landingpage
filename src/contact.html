@@ -18,7 +18,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
     </style>
-    <script type="module" defer src="../src/app/contact.js"></script>
+
 
     <link
       rel="apple-touch-icon"
@@ -129,13 +129,16 @@
             </div>
           </div>
        
-        <form class="form--contact">
+        <form action="https://formsubmit.co/f25c01697571f55b5d4ce759abe154a0" method="POST" class="form--contact">
+          <input type="hidden" name="_subject" value="New DSP message!">
+          <input type="hidden" name="_next" value="https://mmcampbell04.github.io/Dead-Squirel-Productions/thankyou.html" >
           <label for="name">
             <input
               type="text"
               name="name"
               class="form-controls"
               placeholder="Name..."
+              required
             />
           </label>
           <label for="email">
@@ -144,6 +147,7 @@
               name="email"
               class="form-controls"
               placeholder="Email..."
+              required
             />
           </label>
           <label for="message">
@@ -153,45 +157,24 @@
               placeholder="Your message here..."
               class="form-controls"
               rows="8"
+              required
             ></textarea>
           </label>
           <button class="btn btn-secondary">Send</button>
         </form>
       </section>
     </main>
-      <footer class="footer footer-contact">
-      <div class="footer-main">
-         <div class="logo footer-logo"></div>
-          
-            <ul class="social-list">
-                <li class="social-item"><a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="social-item"><a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a></li>
-                <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link"><i class="fab fa-youtube"></i></a></li>
-                  <li class="social-item"><a href="https://twitter.com/" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
-            </ul>
-           
-            <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
-             <p data-date="weekday" class="footer-fineprint fs-xs"></p>
-      </div>
+    <footer class="footer">
+      <div class="logo footer-logo"></div>
+      <ul class="social-list">
+          <li class="social-item"><a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="social-item"><a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a></li>
+          <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link"><i class="fab fa-youtube"></i></a></li>
+            <li class="social-item"><a href="https://twitter.com/" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
+      </ul>
+      <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
+      <p data-date="weekday" class="footer-fineprint fs-xs"></p>
     </footer>
-
-    <!-- <div class="footer-location">
-                    <h4 class="footer-text-header upper">Montreal Office</h4>
-                    <address>
-                      <a href="https://goo.gl/maps/yRwFHK9hcfpBCmRh6">93 Saint-Catherine St W                                   H2X 1Z7</a>
-                    </address>
-                    </div>
-                    <div class="footer-location">
-                      <h4 class="footer-text-header upper">London Office</h4>
-                    <address>
-                      <a href="https://goo.gl/maps/KNjxb2DzMBBtjUgG9"
-                        >Unit CG08 Kings Cross Station
-                        N1C 9AP</a>
-                    </address>
-      
-      
-      
-      
-                  </div> -->
+           
   </body>
 </html>

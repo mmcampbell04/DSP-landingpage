@@ -60,7 +60,8 @@
           class="nav-links-container flex"
           data-visible="false"
         >
-        <div class="logo nav-logo"></div>
+        <div class="logo nav-logo">
+        </div>
           <ul class="nav-links flex">
             <li><a data-link="scroll" href="#about">About</a></li>
             <li><a data-link="scroll" href="#work">Work</a></li>
@@ -82,6 +83,7 @@
     </header>
       
     <main>
+
       <section class="hero">
           <div class="cartoon-wrapper">
             <div class="cartoon">
@@ -113,7 +115,7 @@
           </div>
           <div class="hero-title">
             <h1>
-              <span class="fs-lg ltr-space2">Dead Squirel</span>
+              <span class="fs-lg ltr-space5">Dead Squirel</span>
               <span class="fs-lg fw-300">Productions</span>
             </h1>
           </div>
@@ -125,6 +127,7 @@
                   </a>
           </div>
       </section>
+
       <section id="about" class="about about-grid">
         <h3 class="about-header fs-med upper">Meet The Squirel <span class="wave">&#128075</span></h3>
         <div class="about-text">
@@ -153,27 +156,27 @@
           <!-- showcase of other work in grid -->
         <div class="cards-grid">
           <div class="card-video"> 
-        <iframe src="https://www.youtube.com/embed/W6vczrH937U?" title="Andalucia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/W6vczrH937U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         <h4 class="upper fs-sm teaser">Check out other recent work &#128071</h4>
           <div class="card">
             <img class="card-img first" loading="lazy" src="./images/japan.jpeg" alt="tori gates kyoto">
               <a href="https://youtu.be/vzdYmnPOWDo" class="card-content">Exploring Japan</a>
            </div>
           <div class="card">
-            <img class="card-img second" loading="lazy" src="./images/biking.jpg" alt="man mountain biking">
+            <img class="card-img second" loading="lazy" src="./images/biking2.jpg" alt="man mountain biking">
               <a href="https://youtu.be/739rgW4RXAY" class="card-content">Go-Pro Down a Mountain </a>
           </div>
            <div class="card">
-            <img class="card-img third" loading="lazy" src="./images/mtl-grafitti.jpg" alt="leonard cohen grafitti montreal">
+            <img class="card-img third" loading="lazy" src="./images/montreal.jpg" alt="leonard cohen grafitti montreal">
               <a href="https://youtu.be/2YbHyG14nyg" class="card-content">Bonjour/Hi!</a>
           </div>
           <div class="card">
-            <img class="card-img fourth" loading="lazy" src="./images/gokarts.jpg" alt="kids go karting">
+            <img class="card-img fourth" loading="lazy" src="./images/gokarts2.jpg" alt="kids go karting">
               <a href="" class="card-content">2021 Go-Kart Grand Prix</a>
           </div>
           <div class="card">
-            <img class="card-img fifth" loading="lazy" src="./images/gator.jpg" alt="everglades">
+            <img class="card-img fifth" loading="lazy" src="./images/everglades.jpg" alt="everglades">
             <a href="https://youtu.be/Dlxm-SGdnNA" class="card-content">Gliding Round the Glades</a>            
           </div>
            <div class="card">
@@ -185,8 +188,11 @@
             <a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="btn btn-primary">Show me more!</a>
 
       </section>
+
       <section id="services">
         <h3 class="services-header fs-med upper">The Squirel Does:</h3>
+
+        <!-- css illustrations -->
           <div class="services-container">
             <div class="service filming">
               <div class="illustration camera">
@@ -244,6 +250,9 @@
             </div>
           </div>
       </section>
+
+      <!-- testimonial slider -->
+
       <section class="testimonials">
         <h3 class="fs-med upper">But Don't take our Word for it</h3>
         <div class="slides-container"> 
@@ -264,6 +273,7 @@
           <input type="range" min="0" value="0" max="2" step="1" class="slider" id="range" />
         </div>
       </section>
+
       <section id="subscribe">
         <h4 class="fs-med upper">Become a Squirelfriend</h4>
         <p>Signup to our newsletter and keep up-to-date with all the Squirel's (mis)adventures!</p>
@@ -286,27 +296,19 @@
           </div>
           <!--End mc_embed_signup-->
         </div>
-        <!-- <form action="/" id="newsletter-form">
-          <label><input type="email" name="newsletter" id="newsletter" class="form-controls" placeholder="Email..."/></label>
-       
-        <button class="btn btn-square">Subscribe</button>
-        </form> -->
       </section>
     </main>
     <footer class="footer">
-      <div class="footer-main">
-         <div class="logo footer-logo"></div>
-          
-            <ul class="social-list">
-                <li class="social-item"><a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="social-item"><a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a></li>
-                <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link"><i class="fab fa-youtube"></i></a></li>
-                  <li class="social-item"><a href="https://twitter.com/" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
-            </ul>
-           
-            <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
-             <p data-date="weekday" class="footer-fineprint fs-xs"></p>
-      </div>
+      <div class="logo footer-logo"></div>
+      <ul class="social-list">
+          <li class="social-item"><a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="social-item"><a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a></li>
+          <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link"><i class="fab fa-youtube"></i></a></li>
+            <li class="social-item"><a href="https://twitter.com/" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
+      </ul>
+      <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
+      <p data-date="weekday" class="footer-fineprint fs-xs"></p>
+
     </footer>
       <a class="btn btn-scroll btn-scroll--up" data-link="scroll" id="btn-up" href="#home">
         <span>&#128070;</span>

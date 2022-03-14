@@ -16,6 +16,7 @@ section.contact-us {
     "form";
 
   @include breakpoint-up(medium) {
+    margin-top: 14em;
     column-gap: 2em;
     grid-template-areas:
       "header cartoon"
@@ -39,6 +40,11 @@ section.contact-us {
   place-self: center;
   width: 35vmin;
   height: 35vmin;
+
+  @include breakpoint-up(large) {
+    width: 40vmin;
+    height: 40vmin;
+  }
 }
 
 .contact-page .cartoon-wrapper .lens {

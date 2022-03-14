@@ -1,0 +1,41 @@
+@use "../globals/" as *;
+
+.nav-thanks {
+  padding: clamp(2.5em, 10vw, 4em);
+}
+
+.nav-links-thanks > li {
+  margin-block: 0;
+  padding-block: 0;
+}
+
+.main-thanks {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-height: 85vh;
+}
+
+section.thanks {
+  padding-inline: 0.75em;
+  margin-block: 12em 8em;
+
+  @include breakpoint-up(medium) {
+    padding: 3em;
+    margin-block: 15em 12em;
+  }
+}
+
+.thanks-text {
+  margin-top: 2em;
+}
+
+.footer-thanks {
+  margin-top: 0;
+}
+
+.thanks-logo {
+  height: 1em;
+  width: 2.5em;
+  margin-inline: auto;
+}
