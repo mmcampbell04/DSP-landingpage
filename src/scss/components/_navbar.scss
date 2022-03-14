@@ -44,13 +44,6 @@
   transform: scaleX(1);
 }
 
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--bkg-alpha);
-}
-
 // MOBILE
 @include breakpoint-down(small) {
   nav {
