@@ -24,8 +24,13 @@ footer {
 nav {
   flex-direction: row;
   align-items: center;
-  padding: 2.5em 4em;
+  padding: 2.5em 3em;
   z-index: 100;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bkg-alpha);
 }
 
 main {
@@ -54,7 +59,12 @@ section {
   grid-template-columns: max-content 1.25fr;
 
   @include breakpoint-up(medium) {
-    margin-top: 12em;
+    margin-top: 17em;
+  }
+
+  @include breakpoint-up(large) {
+    padding-inline: 3.25em;
+    margin-top: 21em;
   }
 }
 
@@ -225,6 +235,7 @@ section {
 }
 
 .card-img {
+  width: 100%;
   object-fit: cover;
   aspect-ratio: 1/1;
 
@@ -289,29 +300,19 @@ section {
 
 footer {
   background: var(--accent-bkg);
-  padding-block: 4em 2em;
+  padding-block: 2.5em;
   margin-top: 9em;
+  display: grid;
+  row-gap: 0.75em;
 
   @include breakpoint-up(medium) {
     margin-top: 12em;
   }
 }
 
-.footer-main {
-  grid-column: 2/-2;
-  display: grid;
-  row-gap: 0.75em;
-
-  @include breakpoint-up(medium) {
-    padding: 0 4em;
-    align-items: center;
-    row-gap: 1.5em;
-  }
-}
-
 .footer-logo {
-  height: 2em;
-  width: 5em;
+  height: 1.5em;
+  width: 3em;
   margin-inline: auto;
 
   @include breakpoint-up(medium) {
@@ -327,10 +328,10 @@ footer {
 .social-list {
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
 
   @include breakpoint-up(medium) {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0 2em;
     align-items: center;
   }
