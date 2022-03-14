@@ -10,7 +10,7 @@ This is the first full webpage I designed (though with inspiraiton from Jhey Tho
 
 This is still a work in progress but the live site is here: https://mmcampbell04.github.io/Dead-Squirel-Productions/
 
-## What I've learned so far:
+## What I've learned:
 
 - how to create my own dark mode toggle and use local storage
 - how to adapt someone else's dark mode toggle (thanks Coder, Coder!);
@@ -21,9 +21,8 @@ This is still a work in progress but the live site is here: https://mmcampbell04
 - how incredibly (and frustratingly!) straightforward it is to use a range slider with a slidehow
 - how to use JS to skip to specific sections in the html and then how the scroll-margin-top in CSS is so much easier
 - how to build custom forms
+- used FormSubmit to make the message form functional - maybe PHP another time.
 
 ## Still to-do:
 
-- fix a few broken Youtube links (or add in missing links)
-- improve accessibility - now that the content & layout is done, I intend to go over accessibility guidelines with a fine tooth comb
-- add functionality to the contact page so a message can send. Maybe with PHP, maybe not...
+- improve accessibility - now that the content & layout is done, I intend to go over accessibility guidelines with a finetooth comb
