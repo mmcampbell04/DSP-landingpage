@@ -22,13 +22,6 @@ export function activateMobileMenu() {
 // set fixed navbar on scroll
 export function setFixedNav() {
   const scrollHeight = window.pageYOffset;
-  const navHeight = navbar.getBoundingClientRect().height;
-  if (scrollHeight > navHeight) {
-    navbar.classList.add("fixed-nav");
-  } else {
-    navbar.classList.remove("fixed-nav");
-  }
-
   // show the back to top button when scrolling past a certain point
   if (scrollHeight > 600) {
     btnUp.classList.add("show-btn");
