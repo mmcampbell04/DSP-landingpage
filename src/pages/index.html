@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio website for video production company, Dead Squirel Productions">
     <title>Dead Squirel Productions</title>
     <script
       src="https://kit.fontawesome.com/3376c03b9c.js"
@@ -69,11 +70,11 @@
             <li><a data-link="scroll" href="#services">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          <fieldset aria-label="theme-switcher" tabindex="0">
+          <fieldset aria-label="theme-switcher" >
             <div class="toggle-container">
               <!-- <audio type="audio/wav" autoplay="0" autostart="0" id="audio" src="./images/mixkit-cool-interface-click-tone-2568.wav"  ></audio> -->
               <span class="sr-only">Enable dark mode</span>
-              <input class="checkbox" type="checkbox" id="toggle" name="theme" />
+              <input class="checkbox" type="checkbox" id="toggle" name="theme" tabindex="0"/>
               <label class="label" for="toggle">
                 <span class="sr-only">Dark Mode</span><i class="fas fa-moon"></i>
                 <span class="sr-only">Light Mode</span><i class="fas fa-sun"></i>
@@ -176,7 +177,7 @@
           </div>
           <div class="card">
             <img class="card-img fourth" loading="lazy" src="../images/gokarts2.jpg" alt="kids go karting">
-              <a href="" class="card-content">2021 Go-Kart Grand Prix</a>
+              <a href="https://youtu.be/fVEnWn6Jly0" class="card-content">2021 Go-Kart Grand Prix</a>
           </div>
           <div class="card">
             <img class="card-img fifth" loading="lazy" src="../images/everglades.jpg" alt="everglades">
@@ -273,9 +274,8 @@
           </article>
         </div>
         <div class="slider-wrapper">
-          <label>
-            <input type="range" min="0" value="0" max="2" step="1" class="slider" id="range" />
-          </label>  
+          <label for="toggle-quotes"><span class="sr-only">See Quotes</span></label>  
+            <input type="range" min="0" value="0" max="2" step="1" class="slider" id="toggle-quotes" />
         </div>
       </section>
 
@@ -306,10 +306,10 @@
     <footer class="footer">
       <div class="logo footer-logo"></div>
       <ul class="social-list">
-          <li class="social-item"><a href="https://www.facebook.com/" class="social-link facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li class="social-item"><a href="https://www.instagram.com/" class="social-link instagram"><i class="fab fa-instagram"></i></a></li>
-          <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link youtube"><i class="fab fa-youtube"></i></a></li>
-            <li class="social-item"><a href="https://twitter.com/" class="social-link twitter"> <i class="fab fa-twitter"></i></i></a></li>
+          <li class="social-item"><a href="https://www.facebook.com/" class="social-link facebook"><i class="fab fa-facebook-f"></i><span class="sr-only">Facebook</span></a></li>
+          <li class="social-item"><a href="https://www.instagram.com/" class="social-link instagram"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a></li>
+          <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link"><i class="fab fa-youtube"></i><span class="sr-only">Youtube</span></a></li>
+            <li class="social-item"><a href="https://twitter.com/" class="social-link"> <i class="fab fa-twitter"></i><span class="sr-only">Twitter</span></a></li>
       </ul>
       <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
       <p data-date="weekday" class="footer-fineprint fs-xs"></p>
