@@ -48,23 +48,23 @@ section {
   }
 
   @include breakpoint-up(xlarge) {
-    margin-top: 17em;
+    margin-top: 15em;
   }
 }
 
 // HERO
 .hero {
-  margin-top: 21em;
+  margin-top: 14em;
   display: grid;
   grid-template-columns: max-content 1.25fr;
 
   @include breakpoint-up(medium) {
-    margin-top: 17em;
+    margin-top: 22em;
   }
 
   @include breakpoint-up(large) {
     padding-inline: 3.25em;
-    margin-top: 21em;
+    // margin-top: 21em;
   }
 }
 

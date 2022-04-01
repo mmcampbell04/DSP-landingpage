@@ -63,8 +63,8 @@ p {
   letter-spacing: 2px;
 }
 
-.ltr-space2 {
-  letter-spacing: -2px;
+.ltr-space3 {
+  letter-spacing: -3px;
 }
 
 .upper {
@@ -81,12 +81,6 @@ p {
   font-weight: bold;
 }
 
-address a {
-  font-style: normal;
-  font-size: var(--fs-xxs);
-  font-family: var(--ff-josefin);
-}
-
-address {
-  line-height: 1.2;
+.thanks-header {
+  line-height: 1.5;
 }
