@@ -42,8 +42,6 @@
       color="#5bbad5"
     />
 
-
-   
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <script type="module" defer src="../app/contact.js"></script>
@@ -73,67 +71,85 @@
               <a data-link="scroll" href="index.html#about">About</a>
             </li>
             <li><a data-link="scroll" href="index.html#work">Work</a></li>
-            <li><a data-link="scroll" href="index.html#services">Services</a></li>
+            <li>
+              <a data-link="scroll" href="index.html#services">Services</a>
+            </li>
           </ul>
-          <div class="toggle-container">
-            <!-- <audio
-              type="audio/wav"
-              id="audio"
-              autoplay="0"
-              autostart="0"
-              src="./images/mixkit-cool-interface-click-tone-2568.wav"
-            ></audio> -->
-            <span class="sr-only">Enable dark mode</span>
-            <input class="checkbox" type="checkbox" id="toggle" name="theme" />
-            <label class="label" for="toggle">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-              <div class="ball"></div>
-            </label>
-          </div>
-        </div>
+          <fieldset aria-label="theme-switcher" tabindex="0">
+            <div class="toggle-container">
+              <!-- <audio type="audio/wav" autoplay="0" autostart="0" id="audio" src="./images/mixkit-cool-interface-click-tone-2568.wav"  ></audio> -->
+              <span class="sr-only">Enable dark mode</span>
+              <input class="checkbox" type="checkbox" id="toggle" name="theme" />
+              <label class="label" for="toggle">
+                <span class="sr-only">Dark Mode</span><i class="fas fa-moon"></i>
+                <span class="sr-only">Light Mode</span><i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
+          </fieldset>
       </nav>
     </header>
     <main>
       <section id="contact" class="contact-us">
         <h1 class="contact-header fs-lg">Let's Chat!</h1>
-        <p class="contact-text">If you're interested in working with The Squirel, want to join the team or just say keen to say hi, send a message and he'll get back to ASAP.
-          <br>
-          <br>
-          Prefer face-to-face? Visit our <a href="https://goo.gl/maps/yRwFHK9hcfpBCmRh6" class="underline">Montreal</a> office in the summer months and our <a href="https://goo.gl/maps/KNjxb2DzMBBtjUgG9" class="underline">European HQ</a> from November - March. Even Squirels are struggling with Canadian winters now...</p>
-       
-        <div class="contact-page cartoon-wrapper">
-            <div class="cartoon">
-              <div class="ears left a"></div>
-              <div class="ears right a"></div>
-              <div class="hair a b"></div>
-              <!-- FACE   -->
-              <div class="face a b">
-                <div class="eye a b"></div>
-                <div class="eye a b"></div>
-                <div class="cheek left a"></div>
-                <div class="cheek right a"></div>
-                <div class="freckles"></div>
-                <div class="nose"></div>
-                <div class="mouth left"></div>
-                <div class="mouth right"></div>
-                <div class="teeth a"></div>
-              </div>
+        <p class="contact-text">
+          If you're interested in working with The Squirel, want to join the
+          team or just say keen to say hi, send a message and he'll get back to
+          ASAP.
+          <br />
+          <br />
+          Prefer face-to-face? Visit our
+          <a href="https://goo.gl/maps/yRwFHK9hcfpBCmRh6" class="underline"
+            >Montreal</a
+          >
+          office in the summer months and our
+          <a href="https://goo.gl/maps/KNjxb2DzMBBtjUgG9" class="underline"
+            >European HQ</a
+          >
+          from November - March. Even Squirels are struggling with Canadian
+          winters now...
+        </p>
 
-              <!-- sunglasses   -->
-              <div class="sunglasses">
-                <div class="lens left b"></div>
-                <div class="lens right b"></div>
-                <div class="arm left b a"></div>
-                <div class="arm right b a"></div>
-                <div class="bridge"></div>
-              </div>
+        <div class="contact-page cartoon-wrapper">
+          <div class="cartoon">
+            <div class="ears left a"></div>
+            <div class="ears right a"></div>
+            <div class="hair a b"></div>
+            <!-- FACE   -->
+            <div class="face a b">
+              <div class="eye a b"></div>
+              <div class="eye a b"></div>
+              <div class="cheek left a"></div>
+              <div class="cheek right a"></div>
+              <div class="freckles"></div>
+              <div class="nose"></div>
+              <div class="mouth left"></div>
+              <div class="mouth right"></div>
+              <div class="teeth a"></div>
+            </div>
+
+            <!-- sunglasses   -->
+            <div class="sunglasses">
+              <div class="lens left b"></div>
+              <div class="lens right b"></div>
+              <div class="arm left b a"></div>
+              <div class="arm right b a"></div>
+              <div class="bridge"></div>
             </div>
           </div>
-       
-        <form action="https://formsubmit.co/f25c01697571f55b5d4ce759abe154a0" method="POST" class="form--contact">
-          <input type="hidden" name="_subject" value="New DSP message!">
-          <input type="hidden" name="_next" value="https://mmcampbell04.github.io/Dead-Squirel-Productions/thankyou.html" >
+        </div>
+
+        <form
+          action="https://formsubmit.co/f25c01697571f55b5d4ce759abe154a0"
+          method="POST"
+          class="form--contact"
+        >
+          <input type="hidden" name="_subject" value="New DSP message!" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://mmcampbell04.github.io/Dead-Squirel-Productions/thankyou.html"
+          />
           <label for="name">
             <input
               type="text"
@@ -169,14 +185,35 @@
     <footer class="footer">
       <div class="logo footer-logo"></div>
       <ul class="social-list">
-          <li class="social-item"><a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-          <li class="social-item"><a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a></li>
-          <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link"><i class="fab fa-youtube"></i></a></li>
-            <li class="social-item"><a href="https://twitter.com/" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
+        <li class="social-item">
+          <a href="https://www.facebook.com/" class="social-link facebook"
+            ><i class="fab fa-facebook-f"></i
+            ><span class="sr-only">Facebook</span></a
+          >
+        </li>
+        <li class="social-item">
+          <a href="https://www.instagram.com/" class="social-link instagram"
+            ><i class="fab fa-instagram"></i
+            ><span class="sr-only">Instagram</span></a
+          >
+        </li>
+        <li class="social-item">
+          <a
+            href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ"
+            class="social-link"
+            ><i class="fab fa-youtube"></i
+            ><span class="sr-only">Youtube</span></a
+          >
+        </li>
+        <li class="social-item">
+          <a href="https://twitter.com/" class="social-link">
+            <i class="fab fa-twitter"></i
+            ><span class="sr-only">Twitter</span></a
+          >
+        </li>
       </ul>
       <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
       <p data-date="weekday" class="footer-fineprint fs-xs"></p>
     </footer>
-           
   </body>
 </html>
