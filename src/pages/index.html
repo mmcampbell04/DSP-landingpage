@@ -9,36 +9,37 @@
       src="https://kit.fontawesome.com/3376c03b9c.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../src/scss/styles.scss" />
+    <link rel="stylesheet" href="../scss/styles.scss" />
     <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7_dtp.css" rel="stylesheet" type="text/css">
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Titillium+Web:wght@300;400&display=swap");
     </style>
-    <script type="module" defer src="../src/app/app.js"></script>
-
+    <script type="module" defer src="../app/app.js"></script>
+   
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./favicon/apple-touch-icon.png"
+      href="../favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./favicon/favicon-32x32.png"
+      href="../favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./favicon/favicon-16x16.png"
+      href="../favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="./favicon/safari-pinned-tab.svg"
+      href="../favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
+
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
   </head>
@@ -68,16 +69,18 @@
             <li><a data-link="scroll" href="#services">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          <div class="toggle-container">
-             <!-- <audio type="audio/wav" autoplay="0" autostart="0" id="audio" src="./images/mixkit-cool-interface-click-tone-2568.wav"  ></audio> -->
-            <span class="sr-only">Enable dark mode</span>
-            <input class="checkbox" type="checkbox" id="toggle" name="theme" />
-            <label class="label" for="toggle">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-              <div class="ball"></div>
-            </label>
-          </div>
+          <fieldset aria-label="theme-switcher" tabindex="0">
+            <div class="toggle-container">
+              <!-- <audio type="audio/wav" autoplay="0" autostart="0" id="audio" src="./images/mixkit-cool-interface-click-tone-2568.wav"  ></audio> -->
+              <span class="sr-only">Enable dark mode</span>
+              <input class="checkbox" type="checkbox" id="toggle" name="theme" />
+              <label class="label" for="toggle">
+                <span class="sr-only">Dark Mode</span><i class="fas fa-moon"></i>
+                <span class="sr-only">Light Mode</span><i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
+          </fieldset>
         </div>
       </nav>
     </header>
@@ -115,17 +118,17 @@
           </div>
           <div class="hero-title">
             <h1>
-              <span class="fs-lg ltr-space5">Dead Squirel</span>
-              <span class="fs-lg fw-300">Productions</span>
+              <span class="fs-lg ltr-space3">Dead Squirel</span>
+              <span class="fs-lg ltr-space3 fw-300">Productions</span>
             </h1>
           </div>
            <h2 class="fs-med fw-300 hero-subtitle">Where rabid creativity abounds</h2>
-           <div class="hero-btn">
+           <!-- <div class="hero-btn">
                 <span class="sr-only">Scroll Down</span>
               <a href="#about" data-link="scroll" class="btn btn-scroll btn-scroll--down" >
                 <span>&#128071</span>
                   </a>
-          </div>
+          </div> -->
       </section>
 
       <section id="about" class="about about-grid">
@@ -156,31 +159,31 @@
           <!-- showcase of other work in grid -->
         <div class="cards-grid">
           <div class="card-video"> 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/W6vczrH937U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/W6vczrH937U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         <h4 class="upper fs-sm teaser">Check out other recent work &#128071</h4>
           <div class="card">
-            <img class="card-img first" loading="lazy" src="./images/japan.jpeg" alt="tori gates kyoto">
+            <img class="card-img first" loading="lazy" src="../images/japan.jpeg" alt="tori gates kyoto">
               <a href="https://youtu.be/vzdYmnPOWDo" class="card-content">Exploring Japan</a>
            </div>
           <div class="card">
-            <img class="card-img second" loading="lazy" src="./images/biking2.jpg" alt="man mountain biking">
+            <img class="card-img second" loading="lazy" src="../images/biking2.jpg" alt="man mountain biking">
               <a href="https://youtu.be/739rgW4RXAY" class="card-content">Go-Pro Down a Mountain </a>
           </div>
            <div class="card">
-            <img class="card-img third" loading="lazy" src="./images/montreal.jpg" alt="leonard cohen grafitti montreal">
+            <img class="card-img third" loading="lazy" src="../images/montreal.jpg" alt="leonard cohen grafitti montreal">
               <a href="https://youtu.be/2YbHyG14nyg" class="card-content">Bonjour/Hi!</a>
           </div>
           <div class="card">
-            <img class="card-img fourth" loading="lazy" src="./images/gokarts2.jpg" alt="kids go karting">
+            <img class="card-img fourth" loading="lazy" src="../images/gokarts2.jpg" alt="kids go karting">
               <a href="" class="card-content">2021 Go-Kart Grand Prix</a>
           </div>
           <div class="card">
-            <img class="card-img fifth" loading="lazy" src="./images/everglades.jpg" alt="everglades">
+            <img class="card-img fifth" loading="lazy" src="../images/everglades.jpg" alt="everglades">
             <a href="https://youtu.be/Dlxm-SGdnNA" class="card-content">Gliding Round the Glades</a>            
           </div>
            <div class="card">
-            <img class="card-img last" loading="lazy" src="./images/flamenco.jpg" alt="flameco dancer">
+            <img class="card-img last" loading="lazy" src="../images/flamenco.jpg" alt="flameco dancer">
             <a href="https://youtu.be/50u-hM41Dxo" class="card-content">The Art of Flameco</a>
           </div>
         </div>
@@ -254,7 +257,7 @@
       <!-- testimonial slider -->
 
       <section class="testimonials">
-        <h3 class="fs-med upper">But Don't take our Word for it</h3>
+        <h3 class="fs-med upper">But Don't just take our Word for it</h3>
         <div class="slides-container"> 
           <article class="slide active">
             <p>"We can always rely on the Squirel to provide a full 24/7 filming experience. Merci bien!" </p>
@@ -270,7 +273,9 @@
           </article>
         </div>
         <div class="slider-wrapper">
-          <input type="range" min="0" value="0" max="2" step="1" class="slider" id="range" />
+          <label>
+            <input type="range" min="0" value="0" max="2" step="1" class="slider" id="range" />
+          </label>  
         </div>
       </section>
 
@@ -289,7 +294,7 @@
                    <p class="fs-xxs">By subscribing, you agree with Mailchimp's <a href="">Terms</a> & <a hrf="/">Privacy Policy</a></p>    
                   <div class="mc-container">
                           <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary">
-                          <p class="brandingLogo"><a href="http://eepurl.com/hTTRuH" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                          <p class="brandingLogo"><a href="http://eepurl.com/hTTRuH" title="Mailchimp - email marketing made easy and fun"><img alt="mailchimp logo" src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
                       </div>
                 </div>
             </form>
@@ -301,10 +306,10 @@
     <footer class="footer">
       <div class="logo footer-logo"></div>
       <ul class="social-list">
-          <li class="social-item"><a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-          <li class="social-item"><a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a></li>
-          <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link"><i class="fab fa-youtube"></i></a></li>
-            <li class="social-item"><a href="https://twitter.com/" class="social-link"> <i class="fab fa-twitter"></i></i></a></li>
+          <li class="social-item"><a href="https://www.facebook.com/" class="social-link facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="social-item"><a href="https://www.instagram.com/" class="social-link instagram"><i class="fab fa-instagram"></i></a></li>
+          <li class="social-item"><a href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ" class="social-link youtube"><i class="fab fa-youtube"></i></a></li>
+            <li class="social-item"><a href="https://twitter.com/" class="social-link twitter"> <i class="fab fa-twitter"></i></i></a></li>
       </ul>
       <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
       <p data-date="weekday" class="footer-fineprint fs-xs"></p>
