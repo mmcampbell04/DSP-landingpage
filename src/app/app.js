@@ -21,5 +21,5 @@ scrollLinks.forEach((link) => {
 });
 
 // testimonials slides
-const slider = document.getElementById("range");
+const slider = document.getElementById("toggle-quotes");
 slider.addEventListener("change", getSliderRange);
