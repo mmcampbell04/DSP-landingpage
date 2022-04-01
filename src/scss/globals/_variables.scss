@@ -14,9 +14,9 @@
   --bkg-alpha: var(--bkg-alpha-light);
   --bkg-color-toggle: #181925;
   --accent-bkg: #efe7be;
-  --accent-color: #ec058e;
+  --accent-color: #9d29ba;
   --illustration-primary: #222;
-  --illustration-secondary: #ec058e;
+  --illustration-secondary: #9d29ba;
   --orange: #eca928;
   --yellow: #edde4c;
   --red: #fd689a;
@@ -45,9 +45,9 @@
   --fs-body: clamp(1rem, 3vw, 1.25rem);
   --fs-xxs: clamp(0.5rem, 5vw, 0.75rem);
   --fs-xs: clamp(0.75rem, 5vw, 0.9rem);
-  --fs-sm: clamp(1.25rem, 3vw, 1.75rem);
+  --fs-sm: clamp(1.25rem, 2.75vw, 1.75rem);
   --fs-med: clamp(1.425rem, 5vw, 3rem); //subheader
-  --fs-lg: clamp(1.5rem, 7.75vw, 6.25rem); //header
+  --fs-lg: clamp(1.5rem, 8vw, 6.25rem); //header
 }
 
 [data-theme="dark"] {
