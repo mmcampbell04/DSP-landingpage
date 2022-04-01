@@ -28,6 +28,10 @@
   transition: transform 0.2s linear;
 }
 
+.checkbox:focus + label {
+  box-shadow: 0 0 0 3px var(--accent-color);
+}
+
 .checkbox:checked + label .ball {
   transform: translateX(37px);
 }

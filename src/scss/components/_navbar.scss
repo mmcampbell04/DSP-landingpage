@@ -38,8 +38,7 @@
   transition: 0.4s ease-in-out;
 }
 
-.nav-links li:hover::before,
-.nav-links li:focus::before {
+.nav-links li:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
