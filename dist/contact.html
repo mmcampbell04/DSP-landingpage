@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/3376c03b9c.js"
       crossorigin
     ></script>
-    <link rel="stylesheet" href="index.ef365a19.css" />
+    <link rel="stylesheet" href="index.9605a586.css" />
     <link
       href="//cdn-images.mailchimp.com/embedcode/slim-10_7_dtp.css"
       rel="stylesheet"
@@ -35,7 +35,7 @@
       sizes="16x16"
       href="favicon-16x16.fa7f941c.png"
     />
-    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="manifest" href="up_/favicon/site.webmanifest" />
     <link
       rel="mask-icon"
       href="safari-pinned-tab.0a9eac7f.svg"
@@ -71,14 +71,24 @@
               <a data-link="scroll" href="index.html#services">Services</a>
             </li>
           </ul>
-          <div class="toggle-container">
-            <span class="sr-only">Enable dark mode</span>
-            <input class="checkbox" type="checkbox" id="toggle" name="theme" />
-            <label class="label" for="toggle">
-              <i class="fa-moon fas"></i> <i class="fa-sun fas"></i>
-              <div class="ball"></div>
-            </label>
-          </div>
+          <fieldset aria-label="theme-switcher" tabindex="0">
+            <div class="toggle-container">
+              <span class="sr-only">Enable dark mode</span>
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="toggle"
+                name="theme"
+              />
+              <label class="label" for="toggle">
+                <span class="sr-only">Dark Mode</span
+                ><i class="fa-moon fas"></i>
+                <span class="sr-only">Light Mode</span
+                ><i class="fa-sun fas"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
+          </fieldset>
         </div>
       </nav>
     </header>
@@ -173,26 +183,30 @@
       <div class="footer-logo logo"></div>
       <ul class="social-list">
         <li class="social-item">
-          <a href="https://www.facebook.com/" class="social-link"
+          <a href="https://www.facebook.com/" class="facebook social-link"
             ><i class="fa-facebook-f fab"></i
-          ></a>
+            ><span class="sr-only">Facebook</span></a
+          >
         </li>
         <li class="social-item">
-          <a href="https://www.instagram.com/" class="social-link"
+          <a href="https://www.instagram.com/" class="instagram social-link"
             ><i class="fa-instagram fab"></i
-          ></a>
+            ><span class="sr-only">Instagram</span></a
+          >
         </li>
         <li class="social-item">
           <a
             href="https://www.youtube.com/channel/UC3isKQX-BG1zANKLNyEi4XQ"
             class="social-link"
             ><i class="fa-youtube fab"></i
-          ></a>
+            ><span class="sr-only">Youtube</span></a
+          >
         </li>
         <li class="social-item">
           <a href="https://twitter.com/" class="social-link">
             <i class="fa-twitter fab"></i
-          ></a>
+            ><span class="sr-only">Twitter</span></a
+          >
         </li>
       </ul>
       <p class="footer-fineprint fs-xs">© Dead Squirel Productions 2022</p>
