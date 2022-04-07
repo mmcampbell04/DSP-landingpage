@@ -199,7 +199,7 @@
     var(--red) 75%,
     var(--pinkPurple) 75%
   );
-  border: 6px solid black;
+  border: 0.75vmin solid black;
 }
 
 .lens::before {
@@ -255,13 +255,13 @@
 }
 
 .bridge {
-  width: 9%;
+  width: 11%;
   height: 36%;
   border-radius: 100%;
   clip-path: inset(0 0 50% 0);
-  border: 6px solid black;
+  border: 0.75vmin solid black;
   top: 16%;
-  left: 27%;
+  left: 26%;
 }
 
 @media (max-width: 35em) {
