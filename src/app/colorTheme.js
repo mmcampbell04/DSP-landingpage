@@ -30,10 +30,16 @@ export function setColorScheme(e) {
   }
 }
 
+function playAudio() {
+  const audio = document.getElementById("audio");
+  audio.play();
+}
+
 // toggles theme based on user changes
 toggle.addEventListener("change", (e) => {
   const isChecked = e.target.checked;
   isChecked ? setDarkMode() : setLightMode();
+  playAudio();
 });
 
 // check if there is a theme already  in local storage
